@@ -17,13 +17,12 @@ module.exports = {
 
         const ramenshop = client.guilds.get("511289361178820618");
         ramenshop.members.forEach(member => {
-            await(2000);
             if(member.user.bot) return;
             if(member.roles.has(clan1role)) member.removeRole(guestrole);
             if(member.roles.has(clan2role)) member.removeRole(guestrole);
             if(!member.roles.has(clan1role)) member.addRole(guestrole)
             if(!member.roles.has(clan2role)) member.addRole(guestrole)
-        })
+        }, 2000)
 
         message.edit("Scanning process completed!");
     }
