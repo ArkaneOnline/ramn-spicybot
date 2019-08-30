@@ -22,7 +22,7 @@ module.exports = {
         let suggestionchannel = message.guild.channels.find(`name`, "suggestions");
         suggestionchannel.send(suggestembed);
 
-        return message.reply("Your suggestion has been sent!");
+        return message.reply("Your suggestion has been sent!").then(msg => msg.delete(5000));
 
     }
 }
