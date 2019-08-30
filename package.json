@@ -1,0 +1,15 @@
+{
+  "name": "spicybot",
+  "version": "1.0.0",
+  "description": "A Discord Bot for The Spiciest Ramen Shop Destiny clan",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arkane",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "moment": "^2.24.0"
+  }
+}
