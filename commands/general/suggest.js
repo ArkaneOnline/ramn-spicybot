@@ -9,12 +9,13 @@ module.exports = {
         category: "general"
     },
     run: async (client, message, args) => {
+        await message.delete();
         let suggestion = args.join(" ");
         if(!suggestion) return message.reply("Tell me what you want to suggest! `/suggest <suggestion>`");
 
         let suggestembed = new RichEmbed()
         .setTitle("Suggestion")
-        .setAuthor(message.author)
+        .setAuthor(message.member.displayName)
         .setColor(config.colors.purple)
         .setDescription(suggestion)
 
