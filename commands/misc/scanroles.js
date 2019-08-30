@@ -16,7 +16,7 @@ module.exports = {
         let guestrole = message.guild.roles.find(`name`, "Guest");
 
         const ramenshop = client.guilds.get("511289361178820618");
-        ramenshop.members.forEach(member => {
+        ramenshop.members.asyncForEach(member => {
             const delay = (msec) => new Promise((resolve) => setTimeout(resolve, msec));
             await delay(2000)
             if(member.roles.has(clan1role)) member.removeRole(guestrole);
