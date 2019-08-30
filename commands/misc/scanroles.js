@@ -16,7 +16,7 @@ module.exports = {
         let guestrole = message.guild.roles.find(`name`, "Guest");
 
         const ramenshop = client.guilds.get("511289361178820618");
-        ramenshop.members.foreach(member => {
+        ramenshop.members.forEach(member => {
             if(member.roles.has(clan1role)) member.removeRole(guestrole);
             if(member.roles.has(clan2role)) member.removeRole(guestrole);
             if(!member.roles.has(clan1role)) member.addRole(guestrole)
