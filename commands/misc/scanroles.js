@@ -24,6 +24,7 @@ module.exports = {
             if(!member.roles.has(clan2role)) member.addRole(guestrole)
         }, 2000)
 
-        message.edit("Scanning process completed!");
+        message.delete();
+        message.channel.send("Scanning process complete!");
     }
 }
