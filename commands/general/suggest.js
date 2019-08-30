@@ -18,7 +18,7 @@ module.exports = {
         .setColor(config.colors.purple)
         .setDescription(suggestion)
 
-        let suggestionchannel = message.guild.channels.find(`name`, "suggesitons");
+        let suggestionchannel = message.guild.channels.find(`name`, "suggestions");
         suggestionchannel.send(suggestembed);
 
         return message.reply("Your suggestion has been sent!");
