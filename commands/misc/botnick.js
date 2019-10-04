@@ -6,6 +6,7 @@ module.exports = {
         category: "misc"
     },
     run: async (client, message, args) => {
+        message.delete();
         if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("No.");
         let nick = args.join(" ");
         message.guild.members.get(client.user.id).setNickname(nick)
