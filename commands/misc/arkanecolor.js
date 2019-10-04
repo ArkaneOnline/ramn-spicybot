@@ -1,4 +1,4 @@
-const { opUsers } = require("../../appconfig.json");
+const { opUsers } = require("../../config.json");
 
 module.exports = {
     config: {
