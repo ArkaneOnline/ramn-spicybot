@@ -15,5 +15,7 @@ module.exports = {
         .setThumbnail(client.user.displayAvatarURL)
         .addField("Added the Help Command", "Yes, the most important thing has finally been added...")
         .setFooter("Proudly made by: Arkane", client.users.get(config.importantIDs.staffIDs.arkane).displayAvatarURL)
+
+        message.channel.send(changes);
     }
 }
