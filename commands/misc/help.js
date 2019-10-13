@@ -19,7 +19,7 @@ module.exports = {
         if(!args[0]) {
             const categories = readdirSync("./commands/")
 
-            embed.setDescription(`These are the avaliable commands for ${message.guild.me.displayName}\nMy prefix is: **${prefix}**`)
+            embed.setDescription(`These are the avaliable commands for ${message.guild.me.displayName}\nMy prefix is: **${config.prefix}**`)
             embed.setFooter(`© ${message.guild.me.displayName} | Total Commands: ${client.commands.size}`, client.user.displayAvatarURL);
 
             categories.forEach(category => {
@@ -35,10 +35,10 @@ module.exports = {
             return message.channel.send(embed)
         } else {
             let command = client.commands.get(client.aliases.get(args[0].toLowerCase()) || args[0].toLowerCase())
-            if(!command) return message.channel.send(embed.setTitle("Invalid Command.").setDescription(`Do \`${prefix}help\` for the list of the commands.`))
+            if(!command) return message.channel.send(embed.setTitle("Invalid Command.").setDescription(`Do \`${config.prefix}help\` for the list of the commands.`))
             command = command.config
 
-            embed.setDescription(stripIndents`The bot's prefix is: \`${prefix}\`\n
+            embed.setDescription(stripIndents`The bot's prefix is: \`${config.prefix}\`\n
             **Command:** ${command.name.slice(0, 1).toUpperCase() + command.name.slice(1)}
             **Description:** ${command.description || "No Description provided."}
             **Aliases:** ${command.aliases ? command.aliases.join(", ") : "None."}`)
