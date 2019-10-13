@@ -12,14 +12,14 @@ module.exports = {
     },
     run: async (client, message, args) => {
         const embed = new RichEmbed()
-            .setColor(config.purple)
+            .setColor(config.colors.purple)
             .setAuthor(`${message.guild.me.displayName} Help`, message.guild.iconURL)
             .setThumbnail(client.user.displayAvatarURL)
 
         if(!args[0]) {
             const categories = readdirSync("./commands/")
 
-            embed.setDescription(`These are the avaliable commands for ${message.guild.me.displayName}\nMy prefix is: **${config.prefix}**`)
+            embed.setDescription(`These are the avaliable commands for ${message.guild.me.displayName}\nMy prefix is: **${config.prefix}**\nYou can view more details about a specific command with \`${config.prefix}help <command>\``)
             embed.setFooter(`© ${message.guild.me.displayName} | Total Commands: ${client.commands.size}`, client.user.displayAvatarURL);
 
             categories.forEach(category => {
