@@ -9,6 +9,8 @@ module.exports = {
         category: "misc"
     },  
     run: async (client, message, args) => {
+        await message.delete();
+
         let changes = new RichEmbed()
         .setColor(config.colors.green)
         .setTitle("Changelog 10/13/19")
