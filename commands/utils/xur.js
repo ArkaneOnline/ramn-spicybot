@@ -3,7 +3,7 @@ module.exports = {
         name: "xur",
         aliases: ["xorg"],
         description: "A command that links to https://wherethefuckisxur.com",
-        category: "clan"
+        category: "utils"
     },
     run: async (client, message, args) => {
         await message.delete();

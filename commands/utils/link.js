@@ -3,7 +3,7 @@ module.exports = {
         name: "link",
         aliases: [],
         description: "A guide on how to link your Steam Profile to Discord",
-        category: "clan"
+        category: "utils"
     },
     run: async (client, message, args) => {
         let pinguser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
