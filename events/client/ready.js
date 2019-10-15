@@ -10,7 +10,8 @@ module.exports = async (client, message) => {
         "Join the Ramen Shop!",
         "011011100111010101110100",
         "Read the rules!",
-        "Hunter main, big brain"
+        "Hunter main, big brain",
+        "Invite your friends!"
     ]
     setInterval(() => {
         const presence = Math.floor(Math.random() * (presences.length - 1) + 1);
