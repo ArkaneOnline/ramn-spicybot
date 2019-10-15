@@ -4,7 +4,7 @@ const config = require("../../config.json");
 module.exports = {
     config: {
         name: "apply",
-        aliases: [""],
+        aliases: [],
         description: "A command that allows you to apply for the moderator position in our Discord Server!",
         usage: "<application>",
         category: "utils"
