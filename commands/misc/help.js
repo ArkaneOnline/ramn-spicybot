@@ -43,7 +43,7 @@ module.exports = {
             **Command:** ${command.name.slice(0, 1).toUpperCase() + command.name.slice(1)}
             **Description:** ${command.description || "No Description provided."}
             **Usage:** ${command.usage ? `\`${config.prefix}${command.name} ${command.usage}\`` : "No Usage"}
-            **Aliases:** ${command.aliases ? command.aliases.join(", ") : "None."}`).setFooter("**<command>** = required, **(command)** = optional", client.user.displayAvatarURL)
+            **Aliases:** ${command.aliases ? command.aliases.join(", ") : "None."}`).setFooter("<command> = required, (command) = optional", client.user.displayAvatarURL)
 
             return message.channel.send(embed)
         }
