@@ -3,7 +3,7 @@ module.exports = {
         name: "unreg",
         aliases: [],
         description: "A command that pings all unregistered users and tells them to register",
-        usage: "none",
+        usage: "",
         category: "utils"
     },
     run: async (client, message, args) => {

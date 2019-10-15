@@ -3,7 +3,7 @@ module.exports = {
         name: "ping",
         aliases: ["pong", "latency"],
         descprition: "A command to test bot latency",
-        usage: "none",
+        usage: "",
         category: "general"
     },
     run: async (client, message, args) => {
