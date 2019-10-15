@@ -14,7 +14,7 @@ module.exports = async (client, message) => {
     ]
     setInterval(() => {
         const presence = Math.floor(Math.random() * (presences.length - 1) + 1);
-        console.log(`${client.user.username} is online! \nThe Ramen Shop has ${client.users.size} users!`);
         client.user.setPresence({ game: { name: `${prefix}help | ${presences[presence]}`}, status: "dnd" });
     }, 60000)
+    console.log(`${client.user.username} is online! \nThe Ramen Shop has ${client.users.size} users!`);
 }
