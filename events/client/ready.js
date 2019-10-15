@@ -2,6 +2,19 @@ const Discord = require("discord.js");
 const { prefix } = require("../../config.json");
 
 module.exports = async (client, message) => {
-    console.log(`${client.user.username} is online! \nThe Ramen Shop has ${client.users.size} users!`);
-    client.user.setPresence({ game: { name: `${prefix}help | YOUR GOD IS BACK`}, status: "dnd" });
+    let presences = [
+        "Running through Titan baricades since 1989",
+        "It's real ape hours",
+        `${client.users.size} Ramen Shop members`,
+        "Bubble Titans are scary Titans",
+        "Join the Ramen Shop!",
+        "011011100111010101110100",
+        "Read the rules!",
+        "Hunter main, big brain"
+    ]
+    setInterval(() => {
+        const presence = Math.floor(Math.random() * (presences.length - 1) + 1);
+        console.log(`${client.user.username} is online! \nThe Ramen Shop has ${client.users.size} users!`);
+        client.user.setPresence({ game: { name: `${prefix}help | ${presences[presence]}`}, status: "dnd" });
+    }, 60000)
 }
