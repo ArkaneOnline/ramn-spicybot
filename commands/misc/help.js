@@ -8,6 +8,7 @@ module.exports = {
         name: "help",
         aliases: [],
         description: "The help command",
+        usage: "(command)",
         category: "misc"
     },
     run: async (client, message, args) => {
@@ -38,10 +39,11 @@ module.exports = {
             if(!command) return message.channel.send(embed.setTitle("Invalid Command.").setDescription(`Do \`${config.prefix}help\` for the list of the commands.`))
             command = command.config
 
-            embed.setDescription(stripIndents`The bot's prefix is: \`${config.prefix}\`\n
+            embed.setDescription(stripIndents`My prefix is: \`${config.prefix}\`\n
             **Command:** ${command.name.slice(0, 1).toUpperCase() + command.name.slice(1)}
             **Description:** ${command.description || "No Description provided."}
-            **Aliases:** ${command.aliases ? command.aliases.join(", ") : "None."}`)
+            **Usage:** ${command.usage ? `\`${prefix}${command.name} ${command.usage}\`` : "No Usage"}
+            **Aliases:** ${command.aliases ? command.aliases.join(", ") : "None."}`).setFooter("`<command>` = required, `(command)` = optional", client.user.displayAvatarURL)
 
             return message.channel.send(embed)
         }
