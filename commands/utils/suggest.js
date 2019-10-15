@@ -6,6 +6,7 @@ module.exports = {
         name: "suggest",
         aliases: [],
         descpription: "A command to suggest various things to the server",
+        usage: "<suggestion>",
         category: "general"
     },
     run: async (client, message, args) => {

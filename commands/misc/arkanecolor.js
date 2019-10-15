@@ -5,6 +5,7 @@ module.exports = {
         name: "arkanecolor",
         aliases: [],
         description: "Changes the color of Arkane in the Ramen Shop server",
+        usage: "<hex color>",
         category: "misc"
     },
     run: async (client, message, args) => {

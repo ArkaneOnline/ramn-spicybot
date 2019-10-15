@@ -3,6 +3,7 @@ module.exports = {
         name: "mute",
         aliases: [],
         description: "A command to prevent users from speaking in your server all together",
+        usage: "<@user>",
         category: "mod"
     },
     run: async (client, message, args) => {

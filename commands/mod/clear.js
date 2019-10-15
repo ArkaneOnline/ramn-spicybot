@@ -3,6 +3,7 @@ module.exports = {
         name: "clear",
         aliases: [],
         description: "Deletes messages in bulk in the current channel",
+        usage: "<number>",
         category: "mod"
     },
     run: async (client, message, args) => {

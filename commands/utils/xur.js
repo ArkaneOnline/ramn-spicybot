@@ -3,6 +3,7 @@ module.exports = {
         name: "xur",
         aliases: ["xorg"],
         description: "A command that links to https://wherethefuckisxur.com",
+        usage: "none",
         category: "utils"
     },
     run: async (client, message, args) => {

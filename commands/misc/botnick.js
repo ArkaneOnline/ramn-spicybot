@@ -3,6 +3,7 @@ module.exports = {
         name: "botnick",
         aliases: [],
         description: "Changes the nickname of the bot",
+        usage: "<new nickname>",
         category: "misc"
     },
     run: async (client, message, args) => {

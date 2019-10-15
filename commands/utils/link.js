@@ -3,6 +3,7 @@ module.exports = {
         name: "link",
         aliases: [],
         description: "A guide on how to link your Steam Profile to Discord",
+        usage: "<@user>",
         category: "utils"
     },
     run: async (client, message, args) => {

@@ -6,6 +6,7 @@ module.exports = {
         name: "apply",
         aliases: [],
         description: "A command that allows you to apply for the moderator position in our Discord Server!",
+        usage: "<application>",
         category: "utils"
     },
     run: async (client, message, args) => {

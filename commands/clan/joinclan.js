@@ -3,6 +3,7 @@ module.exports = {
         name: "joinclan",
         aliases: [],
         description: "Sends a message with links to join one of our many great clans!",
+        usage: "none",
         category: "clan"
     },
     run: async (client, message, args) => {

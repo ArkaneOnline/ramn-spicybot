@@ -3,6 +3,7 @@ module.exports = {
         name: "ban",
         aliases: [],
         description: "Bans a user on the spot",
+        usage: "<@user> <reason>",
         category: "mod"
     },
     run: async (client, message, args) => {

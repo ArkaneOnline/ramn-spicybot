@@ -6,6 +6,7 @@ module.exports = {
         name: "hiatus",
         aliases: [],
         descpription: "A command that will tell us when you are on leave from the clan for an extended period of time",
+        usage: "none",
         category: "clan"
     },
     run: async (client, message, args) => {

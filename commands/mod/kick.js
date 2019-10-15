@@ -3,6 +3,7 @@ module.exports = {
         name: "kick",
         aliases: [],
         description: "Kicks a user from the server on the spot",
+        usage: "<@user> <reason>",
         category: "mod"
     },
     run: async (client, message, args) => {

@@ -2,7 +2,9 @@ module.exports = {
     config: {
         name: "ping",
         aliases: ["pong", "latency"],
-        descprition: "A command to test bot latency"
+        descprition: "A command to test bot latency",
+        usage: "none",
+        category: "general"
     },
     run: async (client, message, args) => {
         const m = await message.channel.send("Ping?");

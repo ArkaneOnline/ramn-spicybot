@@ -3,6 +3,7 @@ module.exports = {
         name: "avatar",
         aliases: ["icon", "pfp", "profilepic"],
         description: "View users avatars",
+        usage: "(@user)",
         category: "general"
     },
     run: async (client, message, args) => {

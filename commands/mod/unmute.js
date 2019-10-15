@@ -3,6 +3,7 @@ module.exports = {
         name: "unmute",
         aliases: [],
         description: "A command to allow users to speak again!",
+        usage: "<@user>",
         category: "mod"
     },
     run: async (client, message, args) => {

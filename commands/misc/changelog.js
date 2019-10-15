@@ -6,6 +6,7 @@ module.exports = {
         name: "changelog",
         aliases: [],
         description: "View a list of the most recent changes to the bot",
+        usage: "none",
         category: "misc"
     },  
     run: async (client, message, args) => {
