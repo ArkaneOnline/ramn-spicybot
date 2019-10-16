@@ -11,7 +11,9 @@ module.exports = async (client, message) => {
         "011011100111010101110100",
         "Read the rules!",
         "Hunter main, big brain",
-        "Invite your friends!"
+        "Invite your friends!",
+        "Titan main, tiny brain",
+        "Can we get an async for each function?"
     ]
     setInterval(() => {
         const presence = Math.floor(Math.random() * (presences.length - 1) + 1);
