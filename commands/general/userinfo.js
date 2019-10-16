@@ -11,40 +11,36 @@ module.exports = {
     },
     run: async (client, message, args) => {
         let info = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-        if(!info){
-            let info = message.author;
-            let uembed = new RichEmbed()
-            .setTitle(`Info for ${info.username}`)
-            .setColor(config.colors.purple)
-            .setThumbnail(info.displayAvatarURL)
-            .addField("Discord Tag", info.tag)
-            .addField("Discord ID", info.id)
-            .addField("Account Created", info.createdAt)
-            .addField("Last Message Sent", info.lastMessage)
-            .addField("Presence", info.presence.status)
-            .setFooter(`Info requested by: ${message.author.username}`, message.author.displayAvatarURL)
-            .setTimestamp()
-
-            message.channel.send(uembed);
-        }
-
         if(info){
             let uembed = new RichEmbed()
-            .setTitle(`Info for ${info.username}`)
+            .setTitle(`Info for: ${info.displayName}`)
             .setColor(config.colors.purple)
-            .setThumbnail(info.displayAvatarURL)
-            .addField("Discord Tag", info.tag)
+            .setThumbnail(info.user.displayAvatarURL)
+            .addField("Discord Tag", info.user.tag)
             .addField("Discord ID", info.id)
-            .addField("Account Created", info.createdAt)
-            .addField("Last Message Sent", info.lastMessage)
-            .addField("Presence", info.presence.status)
-            .setFooter(`Info requested by: ${message.author.username}`, message.author.displayAvatarURL)
+            .addField("Account Created", info.user.createdAt)
+            .addField("Joined Server", info.joinedAt)
+            .addField("Status", info.presence.status)
+            .addField("Roles", info.roles)
             .setTimestamp()
-
-            message.channel.send(uembed);
+            .setFooter(`Info requested by: ${message.member.displayName}`, message.member.user.displayAvatarURL)
+        } else {
+            let info = message.member;
+            let uembed = new RichEmbed()
+            .setTitle(`Info for: ${info.displayName}`)
+            .setColor(config.colors.purple)
+            .setThumbnail(info.user.displayAvatarURL)
+            .addField("Discord Tag", info.user.tag)
+            .addField("Discord ID", info.id)
+            .addField("Account Created", info.user.createdAt)
+            .addField("Joined Server", info.joinedAt)
+            .addField("Status", info.presence.status)
+            .addField("Roles", info.roles)
+            .setTimestamp()
+            .setFooter(`Info requested by: ${info.displayName}`, info.user.displayAvatarURL)
         }
 
-        
+        message.channel.send(uembed);
         return;
     }
 }
