@@ -1,7 +1,7 @@
 const { RichEmbed } = require("discord.js");
 
 module.exports = {
-    config = {
+    config: {
         name: "patreon",
         aliases: [],
         description: "Sends a link to join my Patreon as well as thanks all of the current Patrons!",
