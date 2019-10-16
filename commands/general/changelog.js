@@ -7,16 +7,18 @@ module.exports = {
         aliases: [],
         description: "View a list of the most recent changes to the bot",
         usage: "",
-        category: "misc"
+        category: "general"
     },  
     run: async (client, message, args) => {
         await message.delete();
 
         let changes = new RichEmbed()
         .setColor(config.colors.green)
-        .setTitle("Changelog 10/13/19")
+        .setTitle("Changelog 10/15/19")
+        .setDescription("https://github.com/ArkaneOnline/spicybot/commits/master")
         .setThumbnail(client.user.displayAvatarURL)
-        .addField("Added the Help Command", "Yes, the most important thing has finally been added...")
+        .addField("Added the Patreon command", `${config.prefix}help patreon for more info`)
+        .addField("Fixed up the help command", `${config.prefix}help to view the newly designed command`)
         .setFooter("Proudly made by: Arkane", client.users.get(config.importantIDs.staffIDs.arkane).displayAvatarURL)
 
         message.channel.send(changes);
