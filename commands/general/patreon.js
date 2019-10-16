@@ -14,7 +14,7 @@ module.exports = {
         let patronembed = new RichEmbed()
         .setTitle("Patreon")
         .setDescription("https://www.patreon.com/niflonline")
-        .setColor(config.red)
+        .setColor(config.colors.red)
         .addField("> Noodle Tier Patrons", "None")
         .addField("> Cup Ramen Tier Patrons", "None")
         .addField("> Ramen Bowl Tier", "None")
