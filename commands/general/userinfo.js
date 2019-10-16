@@ -10,23 +10,43 @@ module.exports = {
         category: "general"
     },
     run: async (client, message, args) => {
-        if(!args[0]) let info = message.author;
-        if(args[0]) let info = args[0];
+        let info = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+        if(!info){
+            let info = message.author;
+            let uembed = new RichEmbed()
+            .setTitle(`Info for ${info.username}`)
+            .setColor(config.colors.purple)
+            .setThumbnail(info.displayAvatarURL)
+            .addField("Discord Tag", info.tag)
+            .addField("Discord ID", info.id)
+            .addField("Account Created", info.createdAt)
+            .addField("Account Creation Timestamp", info.createdTimestamp)
+            .addField("Last Message Sent", info.lastMessage)
+            .addField("Presence", info.presence)
+            .setFooter(`Info requested by: ${message.author.username}`, message.author.displayAvatarURL)
+            .setTimestamp()
 
-        let uembed = new RichEmbed()
-        .setTitle(`Info for ${info.username}`)
-        .setColor(config.colors.purple)
-        .setThumbnail(info.displayAvatarURL)
-        .addField("Discord Tag", info.tag)
-        .addField("Discord ID", info.id)
-        .addField("Account Created", info.createdAt)
-        .addField("Account Creation Timestamp", info.createdTimestamp)
-        .addField("Last Message Sent", info.lastMessage)
-        .addField("Presence", info.presence)
-        .setFooter(`Info requested by: ${message.author.username}`, message.author.displayAvatarURL)
-        .setTimestamp()
+            message.channel.send(uembed);
+        }
 
-        message.channel.send(uembed);
+        if(info){
+            let uembed = new RichEmbed()
+            .setTitle(`Info for ${info.username}`)
+            .setColor(config.colors.purple)
+            .setThumbnail(info.displayAvatarURL)
+            .addField("Discord Tag", info.tag)
+            .addField("Discord ID", info.id)
+            .addField("Account Created", info.createdAt)
+            .addField("Account Creation Timestamp", info.createdTimestamp)
+            .addField("Last Message Sent", info.lastMessage)
+            .addField("Presence", info.presence)
+            .setFooter(`Info requested by: ${message.author.username}`, message.author.displayAvatarURL)
+            .setTimestamp()
+
+            message.channel.send(uembed);
+        }
+
+        
         return;
     }
 }
