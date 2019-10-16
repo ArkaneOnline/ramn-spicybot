@@ -24,6 +24,8 @@ module.exports = {
             .addField("Roles", info.roles)
             .setTimestamp()
             .setFooter(`Info requested by: ${message.member.displayName}`, message.member.user.displayAvatarURL)
+        
+            message.channel.send(uembed);
         } else {
             let info = message.member;
             let uembed = new RichEmbed()
@@ -38,9 +40,10 @@ module.exports = {
             .addField("Roles", info.roles)
             .setTimestamp()
             .setFooter(`Info requested by: ${info.displayName}`, info.user.displayAvatarURL)
+
+            message.channel.send(uembed);
         }
 
-        message.channel.send(uembed);
         return;
     }
 }
