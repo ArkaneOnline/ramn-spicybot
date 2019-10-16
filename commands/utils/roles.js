@@ -8,17 +8,16 @@ module.exports = {
     },
     run: async (client, message, args) => {
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No.");
-        let users = message.member;
+        const list = client.guilds.get("511289361178820618");
 
         message.channel.send("Scanning and applying roles!");
-        forEach(users => {
-            let users = message.member;
+        list.members.forEach(member => {
             let guest = message.guild.roles.find(`name`, "Guest")
             let clan = message.guild.roles.find(`name`, "RAMN")
-            if(users.roles.has(clan)) users.removeRole(guest)
-            if(!users.roles.has(clan)) users.addRole(guest)
+            if(member.roles.has(clan)) member.removeRole(guest)
+            if(!member.roles.has(clan)) member.addRole(guest)
             await(2000);
-        });
+        })
         message.channel.send("Roles scanned and applied! Check `console.log()` for more info!");
     }
 }
