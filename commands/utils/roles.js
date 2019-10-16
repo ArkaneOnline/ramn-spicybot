@@ -11,7 +11,7 @@ module.exports = {
         let users = message.member;
 
         message.channel.send("Scanning and applying roles!");
-        array.forEach(users => {
+        users.forEach(users => {
             let guest = message.guild.roles.find(`name`, "Guest")
             let clan = message.guild.roles.find(`name`, "RAMN")
             if(users.roles.has(clan)) users.removeRole(guest)
