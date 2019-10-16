@@ -12,12 +12,11 @@ module.exports = {
 
         message.channel.send("Scanning and applying roles!");
         list.members.forEach(member => {
-            const delay = (msec) => new Promise((resolve) => setTimeout(resolve, msec));
+            setTimeout(function() {console.log("Waiting for 2 seconds!"); }, 2000)
             let guest = message.guild.roles.find(`name`, "Guest")
             let clan = message.guild.roles.find(`name`, "RAMN")
             if(member.roles.has(clan)) member.removeRole(guest)
             if(!member.roles.has(clan)) member.addRole(guest)
-            delay(2000);
         })
         message.channel.send("Roles scanned and applied! Check `console.log()` for more info!");
     }
