@@ -1,4 +1,4 @@
-import RichEmbed from "discord.js";
+const { RichEmbed } = require("discord.js");
 
 export const config = {
     name: "patreon",
