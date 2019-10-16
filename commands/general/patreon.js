@@ -1,4 +1,5 @@
 const { RichEmbed } = require("discord.js");
+const config = require("../../config.json");
 
 module.exports = {
     config: {
@@ -13,6 +14,7 @@ module.exports = {
         let patronembed = new RichEmbed()
         .setTitle("Patreon")
         .setDescription("https://www.patreon.com/niflonline")
+        .setColor(config.red)
         .addField("> Noodle Tier Patrons", "None")
         .addField("> Cup Ramen Tier Patrons", "None")
         .addField("> Ramen Bowl Tier", "None")
