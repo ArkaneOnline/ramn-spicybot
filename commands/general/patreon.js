@@ -15,6 +15,7 @@ module.exports = {
         .setTitle("Patreon")
         .setDescription("https://www.patreon.com/niflonline")
         .setColor(config.colors.red)
+        .setThumbnail(client.users.get(config.importantIDs.staffIDs.arkane).displayAvatarURL)
         .addField("> Noodle Tier Patrons", "None")
         .addField("> Cup Ramen Tier Patrons", "None")
         .addField("> Ramen Bowl Tier", "None")
