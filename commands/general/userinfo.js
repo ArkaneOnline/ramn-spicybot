@@ -20,9 +20,8 @@ module.exports = {
             .addField("Discord Tag", info.tag)
             .addField("Discord ID", info.id)
             .addField("Account Created", info.createdAt)
-            .addField("Account Creation Timestamp", info.createdTimestamp)
             .addField("Last Message Sent", info.lastMessage)
-            .addField("Presence", info.presence)
+            .addField("Presence", info.presence.status)
             .setFooter(`Info requested by: ${message.author.username}`, message.author.displayAvatarURL)
             .setTimestamp()
 
@@ -37,9 +36,8 @@ module.exports = {
             .addField("Discord Tag", info.tag)
             .addField("Discord ID", info.id)
             .addField("Account Created", info.createdAt)
-            .addField("Account Creation Timestamp", info.createdTimestamp)
             .addField("Last Message Sent", info.lastMessage)
-            .addField("Presence", info.presence)
+            .addField("Presence", info.presence.status)
             .setFooter(`Info requested by: ${message.author.username}`, message.author.displayAvatarURL)
             .setTimestamp()
 
