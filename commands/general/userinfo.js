@@ -21,7 +21,7 @@ module.exports = {
             .addField("Account Created", info.user.createdAt)
             .addField("Joined Server", info.joinedAt)
             .addField("Status", info.presence.status)
-            .addField("Roles", info.roles)
+            .addField("Roles", `${info.roles}`)
             .setTimestamp()
             .setFooter(`Info requested by: ${message.member.displayName}`, message.member.user.displayAvatarURL)
         
@@ -37,7 +37,7 @@ module.exports = {
             .addField("Account Created", info.user.createdAt)
             .addField("Joined Server", info.joinedAt)
             .addField("Status", info.presence.status)
-            .addField("Roles", info.roles)
+            .addField("Roles", `${info.roles}`)
             .setTimestamp()
             .setFooter(`Info requested by: ${info.displayName}`, info.user.displayAvatarURL)
 
