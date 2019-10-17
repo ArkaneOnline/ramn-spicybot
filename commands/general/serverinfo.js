@@ -19,6 +19,7 @@ module.exports = {
         .addField("Created on", message.guild.createdAt)
         .addField("Member count", message.guild.memberCount)
         .addField("Owner", message.guild.owner)
+        .addField("Server Region", message.guild.region)
         .setTimestamp()
         .setFooter(`Info requested by: ${message.author.username}`, message.author.displayAvatarURL)
 
