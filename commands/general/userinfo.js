@@ -20,6 +20,7 @@ module.exports = {
             .addField("Discord ID", info.id)
             .addField("Account Created", info.user.createdAt)
             .addField("Joined Server", info.joinedAt)
+            .addField("Roles", info.roles.map(r => `${r}`).join(" | "), true)
             .addField("Status", info.presence.status)
             .setTimestamp()
             .setFooter(`Info requested by: ${message.member.displayName}`, message.member.user.displayAvatarURL)
