@@ -21,5 +21,7 @@ module.exports = {
         .addField("Owner", message.guild.owner)
         .setTimestamp()
         .setFooter(`Info requested by: ${message.author.username}`, message.author.displayAvatarURL)
+
+        message.channel.send(serverembed);
     }
 }
