@@ -13,7 +13,7 @@ module.exports = {
         let serverembed = new RichEmbed()
         .setTitle(message.guild.name)
         .setColor(config.yellow)
-        .setThumbnail(message.guild.icon)
+        .setThumbnail(message.guild.iconURL)
         .setURL("https://invite.gg/ramenshop")
         .addField("Server ID", message.guild.id)
         .addField("Created on", message.guild.createdAt)
