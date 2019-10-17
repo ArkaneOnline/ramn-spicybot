@@ -15,7 +15,6 @@ module.exports = {
         let changes = new RichEmbed()
         .setColor(config.colors.green)
         .setTitle("Changelog 10/17/19")
-        .setDescription("https://github.com/ArkaneOnline/spicybot/commits/master")
         .setURL("https://github.com/ArkaneOnline/spicybot/commits/master")
         .setThumbnail(client.user.displayAvatarURL)
         .addField("Added the serverinfo command", "Check `/help serverinfo` for more info")
