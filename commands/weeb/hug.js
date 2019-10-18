@@ -11,7 +11,14 @@ module.exports = {
     },
     run: async (client, message, args) => {
         let hugurl = await neko.sfw.hug();
-        message.channel.send(hugurl.url);
-        console.log(hugurl.url);
+        let huser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+
+        if(huser){
+            message.channel.send(`${huser}, ${message.author} sends you a virtual hug! \n${hugurl.url}`);
+        } else {
+            message.channel.send(`I'll give you a virtual hug! \n${hugurl.url}`);
+        }
+
+        return;
     }
 }
