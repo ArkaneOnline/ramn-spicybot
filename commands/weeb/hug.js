@@ -10,6 +10,7 @@ module.exports = {
         category: "weeb"
     },
     run: async (client, message, args) => {
+        console.log(await neko.sfw.hug());
         message.channel.send(await neko.sfw.hug());
     }
 }
