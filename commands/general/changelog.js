@@ -14,11 +14,11 @@ module.exports = {
 
         let changes = new RichEmbed()
         .setColor(config.colors.green)
-        .setTitle("Changelog 10/17/19")
+        .setTitle("Changelog 10/21/19")
         .setURL("https://github.com/ArkaneOnline/spicybot/commits/master")
         .setThumbnail(client.user.displayAvatarURL)
-        .addField("Added the serverinfo command", "Check `/help serverinfo` for more info")
-        .addField("Added the userinfo command", "Try `/help userinfo` for more info")
+        .addField("Added the Weeb category", `Check ${config.prefix}help for more info`)
+        .addField("Added uptime command", `Check ${config.prefix}help uptime for more info`)
         .addField("Side note", "If you like Spicy Bot, or our server, you can show your support by donating (`/patreon`) and obtain a special donator role!")
         .setFooter("Proudly made by: Arkane", client.users.get(config.importantIDs.staffIDs.arkane).displayAvatarURL)
 
