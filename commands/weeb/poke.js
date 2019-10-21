@@ -14,9 +14,9 @@ module.exports = {
         let puser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 
         if(puser){
-            message.channel.send(`${puser}, ${message.author} sends you a virtual head pat! \n${poke.url}`);
+            message.channel.send(`${puser}, Poke! \n${poke.url}`);
         } else {
-            message.channel.send(`I'll give you a virtual head pat! \n${poke.url}`);
+            message.channel.send(`Poke! \n${poke.url}`);
         }
 
         return;
