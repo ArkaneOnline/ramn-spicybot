@@ -11,6 +11,7 @@ module.exports = {
     },
     run: async (client, message, args) => {
         await message.delete();
+        return message.reply("Sorry, Moderator applications are currently closed!");
 
         let application = args.join(" ");
         if (!application) return message.reply("Incorrect Usage! Example: `/apply I want to be mod because...`");
