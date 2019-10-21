@@ -6,7 +6,7 @@ module.exports = {
         name: "slap",
         aliases: [],
         description: "Slap somebody for being a fucking idiot!",
-        usage: "(@user)",
+        usage: "<@user>",
         category: "weeb"
     },
     run: async (client, message, args) => {
@@ -14,9 +14,9 @@ module.exports = {
         let suser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 
         if(suser){
-            message.channel.send(`${suser}, ${message.author} sends you a virtual kiss! \n${slap.url}`);
+            message.channel.send(`${suser}, ${message.author} slaps you! \n${slap.url}`);
         } else {
-            message.channel.send(`I'll give you a virtual kiss! \n${slap.url}`);
+            return;
         }
 
         return;
