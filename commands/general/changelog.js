@@ -4,7 +4,7 @@ const config = require("../../config.json");
 module.exports = {
     config: {
         name: "changelog",
-        aliases: [],
+        aliases: ["patch", "patchnotes"],
         description: "View a list of the most recent changes to the bot",
         usage: "",
         category: "general"
