@@ -1,3 +1,5 @@
+const config = require("../../config.json");
+
 module.exports = {
     config: {
         name: "say",
@@ -7,8 +9,9 @@ module.exports = {
         category: "util"
     },
     run: async (client, message, args) => {
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No.");
         let say = args.join(" ");
-        if(!say) return message.reply("I need to know what you want me to say! `/help say`");
+        if(!say) return message.reply(`I need to know what you want me to say! \`${config.prefix}help say\``);
 
         await message.delete();
         message.channel.send(say);
