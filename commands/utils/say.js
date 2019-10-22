@@ -10,6 +10,7 @@ module.exports = {
         let say = args.join(" ");
         if(!say) return message.reply("I need to know what you want me to say! `/help say`");
 
+        await message.delete();
         message.channel.send(say);
         return;
     }
