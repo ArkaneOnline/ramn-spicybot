@@ -13,6 +13,7 @@
     "common-tags": "^1.8.0",
     "discord.js": "^11.5.1",
     "moment": "^2.24.0",
-    "nekos.life": "^2.0.4"
+    "nekos.life": "^2.0.4",
+    "the-traveler": "^1.0.1"
   }
 }
