@@ -1,5 +1,4 @@
 const Traveler = require("the-traveler").default;
-const Enums = require("the-traveler/build/enums")
 
 const traveler = new Traveler({ apikey: "b91083e79056494d91ca582eaaad9938", userAgent: "app-platform" })
 
