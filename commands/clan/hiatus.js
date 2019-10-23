@@ -5,7 +5,7 @@ module.exports = {
     config: {
         name: "hiatus",
         aliases: [],
-        descpription: "A command that will tell us when you are on leave from the clan for an extended period of time",
+        description: "A command that will tell us when you are on leave from the clan for an extended period of time",
         usage: "",
         category: "clan"
     },
