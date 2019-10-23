@@ -1,4 +1,5 @@
 const Traveler = require("the-traveler").default;
+const groupv2 = require("the-traveler/build/type-definitions/groupv2/index")
 
 const traveler = new Traveler({ apikey: "b91083e79056494d91ca582eaaad9938", userAgent: "app-platform" })
 
@@ -12,7 +13,7 @@ module.exports = {
     },
     run: async (client, message, args) => {
         await message.delete();
-        let clan3count = traveler.groupv2.getMembersOfGroup("1", "3868416")
+        let clan3count = groupv2.GroupsForMemberFilter.All();
 
         consolg.log(clan3count);
 
