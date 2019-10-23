@@ -4,7 +4,7 @@ const config = require("../../config.json");
 module.exports = {
     config: {
         name: "userinfo",
-        aliases: [],
+        aliases: ["accountinfo"],
         description: "Gets all avaliable info from a users profile",
         usage: "(@user)",
         category: "general"

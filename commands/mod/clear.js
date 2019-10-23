@@ -1,7 +1,7 @@
 module.exports = {
     config: {
         name: "clear",
-        aliases: [],
+        aliases: ["purge", "prune", "delete"],
         description: "Deletes messages in bulk in the current channel",
         usage: "<number>",
         category: "mod"

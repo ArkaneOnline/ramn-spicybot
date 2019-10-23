@@ -1,7 +1,7 @@
 module.exports = {
     config: {
-        name: "link",
-        aliases: [],
+        name: "steam",
+        aliases: ["link"],
         description: "A guide on how to link your Steam Profile to Discord",
         usage: "<@user>",
         category: "utils"

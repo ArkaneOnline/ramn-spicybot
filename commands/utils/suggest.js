@@ -4,7 +4,7 @@ const config = require("../../config.json");
 module.exports = {
     config: {
         name: "suggest",
-        aliases: [],
+        aliases: ["request"],
         descpription: "A command to suggest various things to the server",
         usage: "<suggestion>",
         category: "general"

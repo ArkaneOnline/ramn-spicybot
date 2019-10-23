@@ -4,7 +4,7 @@ const config = require("../../config.json");
 module.exports = {
     config: {
         name: "patreon",
-        aliases: [],
+        aliases: ["donate"],
         description: "Sends a link to join my Patreon as well as thanks all of the current Patrons!",
         usage: "",
         category: "general"

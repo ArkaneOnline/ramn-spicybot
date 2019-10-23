@@ -2,7 +2,7 @@ module.exports = {
     config: {
         name: "avatar",
         aliases: ["icon", "pfp", "profilepic"],
-        description: "View users avatars",
+        description: "Allows you to view you or another users avatar",
         usage: "(@user)",
         category: "general"
     },

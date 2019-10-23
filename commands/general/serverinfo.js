@@ -4,7 +4,7 @@ const config = require("../../config.json");
 module.exports = {
     config: {
         name: "serverinfo",
-        aliases: [],
+        aliases: ["guildinfo"],
         description: "A command to display the info of the current server",
         usage: "",
         category: "general"
