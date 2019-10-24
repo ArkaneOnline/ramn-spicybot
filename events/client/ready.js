@@ -2,6 +2,8 @@ const Discord = require("discord.js");
 const { prefix } = require("../../config.json");
 
 module.exports = async (client, message) => {
+    let omegalul = client.emojis.get("591452570103578644");
+    
     let presences = [
         "Running through Titan baricades since 1989",
         "It's real ape hours",
@@ -13,7 +15,8 @@ module.exports = async (client, message) => {
         "Hunter main, big brain",
         "Invite your friends!",
         "Titan main, tiny brain",
-        "Can we get an async for each function?"
+        "Can we get an async for each function?",
+        `side${omegalul}rms`
     ]
     setInterval(() => {
         const presence = Math.floor(Math.random() * (presences.length - 1) + 1);
