@@ -5,17 +5,17 @@ module.exports = async (client, message) => {
     let omegalul = client.emojis.get("591452570103578644");
     
     let presences = [
-        "Running through Titan baricades since 1989",
-        "It's real ape hours",
-        `${client.users.size} Ramen Shop members`,
-        "Bubble Titans are scary Titans",
-        "Join the Ramen Shop!",
-        "011011100111010101110100",
-        "Read the rules!",
-        "Hunter main, big brain",
-        "Invite your friends!",
-        "Titan main, tiny brain",
-        "Can we get an async for each function?",
+        //"Running through Titan baricades since 1989",
+        //"It's real ape hours",
+        //`${client.users.size} Ramen Shop members`,
+        //"Bubble Titans are scary Titans",
+        //"Join the Ramen Shop!",
+        //"011011100111010101110100",
+        //"Read the rules!",
+        //"Hunter main, big brain",
+        //"Invite your friends!",
+        //"Titan main, tiny brain",
+        //"Can we get an async for each function?",
         `side${omegalul}rms`
     ]
     setInterval(() => {
