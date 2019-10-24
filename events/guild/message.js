@@ -1,5 +1,4 @@
-const config = require("../../config.json");
-let prefix = config.prefix;
+const { prefix } = require("../../config.json");
 
 module.exports = async (client, message) => {
 

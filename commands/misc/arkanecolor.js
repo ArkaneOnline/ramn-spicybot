@@ -1,5 +1,3 @@
-const { opUsers } = require("../../config.json");
-
 module.exports = {
     config: {
         name: "arkanecolor",

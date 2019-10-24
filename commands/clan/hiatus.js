@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const { RichEmbed } = require("discord.js");
 const config = require("../../config.json");
 
 module.exports = {
@@ -45,7 +45,7 @@ module.exports = {
                 let reason = collected.first().content;
             
                 //creates embed with all the info and sends the info to the specified channel
-                let hembed = new Discord.RichEmbed()
+                let hembed = new RichEmbed()
                 .setColor(config.colors.green)
                 .setTitle("Hiatus Request")
                 .addField("User", huser)
