@@ -1,10 +1,11 @@
 const { RichEmbed } = require("discord.js");
 const config = require("../../config.json");
+const moment = require("moment");
 
 module.exports = {
     config: {
         name: "serverinfo",
-        aliases: ["guildinfo"],
+        aliases: ["guildinfo", "si", "gi"],
         description: "A command to display the info of the current server",
         usage: "",
         category: "general"
@@ -16,7 +17,7 @@ module.exports = {
         .setThumbnail(message.guild.iconURL)
         .setURL("https://invite.gg/ramenshop")
         .addField("Server ID", message.guild.id)
-        .addField("Created on", message.guild.createdAt)
+        .addField("Created on", moment(message.guild.createdAt).format("MMMM Do YYYY h:mm:ss a"))
         .addField("Member count", message.guild.memberCount)
         .addField("Owner", message.guild.owner)
         .addField("Server Region", message.guild.region)
