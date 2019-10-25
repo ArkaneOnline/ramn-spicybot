@@ -16,7 +16,7 @@ module.exports = {
         let banreason = args.join(" ").slice(22);
         if(!banreason) return message.reply("Tell me why I am banning this person! `/ban @user reason`");
         if(banned.hasPermission("ADMINISTRATOR")) return message.reply("This person is too important to ban!");
-        if(!banned.bannable()) return message.reply("Can't ban 'em, and I don't know why?");
+        if(banned.bannable() === true) return message.reply("Can't ban 'em, and I don't know why?");
     
         banned.send(`You have been banned from **${message.channel.guild.name}** for the reason: **${banreason}**`);
         await delay(500);
