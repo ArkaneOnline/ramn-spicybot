@@ -1,10 +1,11 @@
 const { RichEmbed } = require("discord.js");
 const config = require("../../config.json");
+const moment = require("moment");
 
 module.exports = {
     config: {
         name: "userinfo",
-        aliases: ["accountinfo"],
+        aliases: ["accountinfo", "ui"],
         description: "Gets all avaliable info from a users profile",
         usage: "(@user)",
         category: "general"
@@ -18,8 +19,8 @@ module.exports = {
             .setThumbnail(info.user.displayAvatarURL)
             .addField("Discord Tag", info.user.tag)
             .addField("Discord ID", info.id)
-            .addField("Account Created", info.user.createdAt)
-            .addField("Joined Server", info.joinedAt)
+            .addField("Account Created", moment(info.createdAt).format("MMMM Do YYYY h:mm:ss a"))
+            .addField("Joined Server", moment(info.joinedAt).format("MMMM Do YYYY h:mm:ss a"))
             .addField("Roles", info.roles.map(r => `${r}`).join(" | "), true)
             .addField("Status", info.presence.status)
             .setTimestamp()
@@ -34,8 +35,8 @@ module.exports = {
             .setThumbnail(info.user.displayAvatarURL)
             .addField("Discord Tag", info.user.tag)
             .addField("Discord ID", info.id)
-            .addField("Account Created", info.user.createdAt)
-            .addField("Joined Server", info.joinedAt)
+            .addField("Account Created", moment(info.createdAt).format("MMMM Do YYYY h:mm:ss a"))
+            .addField("Joined Server", moment(info.joinedAt).format("MMMM Do YYYY h:mm:ss a"))
             .addField("Roles", info.roles.map(r => `${r}`).join(" | "), true)
             .addField("Status", info.presence.status)
             .setTimestamp()
