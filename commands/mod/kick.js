@@ -16,7 +16,7 @@ module.exports = {
         let kickreason = args.join(" ").slice(22);
         if(!kickreason) return message.reply("Give me a reason why they are being kicked! `/kick @user reason`");
         if(kicked.hasPermission("ADMINISTRATOR")) return message.reply("Can't kick 'em, they just seem too important!");
-        if(!kicked.kickable()) return message.reply("For some reason, this user isn't kickable?");
+        if(kicked.kickable() === true) return message.reply("For some reason, this user isn't kickable?");
     
         kicked.send(`You have been kicked from **${message.channel.guild.name}** for the reason: **${kickreason}**`)
         await delay(500);
