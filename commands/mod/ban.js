@@ -18,7 +18,12 @@ module.exports = {
         if(banned.hasPermission("ADMINISTRATOR")) return message.reply("This person is too important to ban!");
         if(banned.bannable() === true) return message.reply("Can't ban 'em, and I don't know why?");
     
-        banned.send(`You have been banned from **${message.channel.guild.name}** for the reason: **${banreason}**`);
+        banned.send(`You have been banned from **${message.channel.guild.name}** for the reason: **${banreason}**`, {
+            files: [{
+                attachment: "./assets/banned.jpg",
+                name: "banned.jpg"
+            }]
+        });
         await delay(500);
         message.reply("User banned!");
         message.guild.member(banned).ban(banreason);
