@@ -1,4 +1,4 @@
-import * as client from "nekos.life";
+import client from "nekos.life";
 const neko = new client();
 
 export const config = {
