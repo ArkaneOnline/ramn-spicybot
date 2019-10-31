@@ -11,7 +11,7 @@ module.exports = async (client, message) => {
     let guestrole = message.guild.roles.find(`name`, "Guest");
     members.forEach(member => {
         if(member.roles.has(clanrole)) member.removeRole(guestrole);
-    });
+    })
 
     let args = message.content.slice(prefix.length).trim().split(/ +/g)
     let cmd = args.shift().toLowerCase();
