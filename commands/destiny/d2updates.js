@@ -8,7 +8,7 @@ module.exports = {
     },
     run: async (client, message, agrs) => {
         let d2role = message.guild.roles.find(x => x.name === "D2 Updates");
-        if(message.member.roles.has(d2role)){
+        if(message.member.roles.has(d2role.id)){
             message.member.removeRole(d2role.id);
             message.reply(`I have removed the ${d2role.name} role from you!`);
             return;
