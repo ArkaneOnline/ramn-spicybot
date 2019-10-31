@@ -8,6 +8,10 @@ module.exports = {
     },
     run: async (client, message, agrs) => {
         let clanrole = message.guild.roles.find(x => x.name === "Clan Raids");
+        let memberrole = message.guild.roles.find(x => x.name === "RAMN")
+
+        if(!message.member.roles.has(memberrole.id)) return message.reply("Only Clan Members may receive this role! \nIf you are a Clan Member, make sure you are registered with <@296023718839451649> (`d!register`) \nIf you are registered, please contact your clan leader for assistance!")
+
         if(message.member.roles.has(clanrole.id)){
             message.member.removeRole(clanrole.id);
             message.reply(`I have removed the ${clanrole.name} role from you!`);
