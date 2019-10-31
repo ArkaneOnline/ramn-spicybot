@@ -25,5 +25,6 @@ module.exports = {
         .setFooter(`Info requested by: ${message.author.username}`, message.author.displayAvatarURL)
 
         message.channel.send(serverembed);
+        return;
     }
 }
