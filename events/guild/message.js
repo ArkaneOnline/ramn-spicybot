@@ -9,20 +9,19 @@ module.exports = async (client, message) => {
     let members = message.guild.members;
     members.forEach(member => {
         let clanrole = message.guild.roles.find(x => x.name === "RAMN");
-        let guestrole = message.guild.roles.find(x => x.name === "Guest");
         if(member.user.bot) return;
         if(member.roles.has(clanrole)){
-            if(member.roles.has(guestrole)){
-                member.removeRole(guestrole)
+            if(member.roles.has(message.guild.roles.find(x => x.name === "Guest"))){
+                member.removeRole(message.guild.roles.find(x => x.name === "Guest"))
             } else {
                 return;
             }
         }
         if(!member.roles.has(clanrole)){
-            if(member.roles.has(guestrole)){
+            if(member.roles.has(message.guild.roles.find(x => x.name === "Guest"))){
                 return;
             } else {
-                member.addRole(guestrole)
+                member.addRole(message.guild.roles.find(x => x.name === "Guest"))
             }
         }
     });
