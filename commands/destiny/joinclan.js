@@ -4,7 +4,7 @@ module.exports = {
         aliases: [],
         description: "Sends a message with links to join one of our many great clans!",
         usage: "",
-        category: "clan"
+        category: "destiny"
     },
     run: async (client, message, args) => {
         await message.delete();

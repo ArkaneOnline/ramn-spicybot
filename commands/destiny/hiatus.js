@@ -7,7 +7,7 @@ module.exports = {
         aliases: [],
         description: "A command that will tell us when you are on leave from the clan for an extended period of time",
         usage: "",
-        category: "clan"
+        category: "destiny"
     },
     run: async (client, message, args) => {
         message.delete();
