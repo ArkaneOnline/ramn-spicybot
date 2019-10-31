@@ -11,7 +11,6 @@ module.exports = {
         if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("No.");
         let unreg = message.guild.roles.find(`name`, "Unregistered");
         let count = unreg.members.size;
-        console.log(unreg.members);
 
         message.channel.send(`${unreg} \nPlease make sure you head over to <#555615156306968576> and register (\`d!register\`) with <@296023718839451649>! \nThere are currently \`${count} unregistered users!\``);
         return;
