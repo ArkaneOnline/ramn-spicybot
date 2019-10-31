@@ -13,6 +13,13 @@ module.exports = async (client, message) => {
         if(member.user.bot) return;
         if(member.roles.has(clanrole)){
             if(member.roles.has(guestrole)){
+                member.removeRole(guestrole)
+            } else {
+                return;
+            }
+        }
+        if(!member.roles.has(clanrole)){
+            if(member.roles.has(guestrole)){
                 return;
             } else {
                 member.addRole(guestrole)
