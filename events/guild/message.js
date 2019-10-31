@@ -12,11 +12,11 @@ module.exports = async (client, message) => {
         let guestrole = message.guild.roles.find(`name`, "Guest");
         if(member.user.bot) return;
         if(member.roles.has(clanrole)){
-             member.removeRole(guestrole);
-        } else if (member.roles.has(guestrole)) {
-            return;
-        } else {
-            member.addRole(guestrole)
+            if(member.roles.has(guestrole)){
+                return;
+            } else {
+                member.addRole(guestrole)
+            }
         }
     });
 
