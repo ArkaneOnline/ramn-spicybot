@@ -7,8 +7,8 @@ module.exports = async (client, message) => {
     if(message.channel.type === 'dm') return message.reply("You must use me in The Ramen Shop Server only!");
 
     let members = message.guild.members;
-    let clanrole = message.guild.roles.find(x => x.name === "RAMN");
-    let guestrole = message.guild.roles.find(x => x.name === "Guest");
+    let clanrole = message.guild.roles.find(`name`, "RAMN");
+    let guestrole = message.guild.roles.find(`name`, "Guest");
     members.forEach(member => {
         if(member.roles.has(clanrole)) member.removeRole(guestrole);
     });
