@@ -10,13 +10,7 @@ module.exports = async (client, message) => {
     let clanrole = message.guild.roles.find(x => x.name === "RAMN");
     let guestrole = message.guild.roles.find(x => x.name === "Guest");
     members.forEach(member => {
-        if(member.roles.has(clanrole)){
-            if(member.roles.has(guestrole)){
-                member.removeRole(guestrole)
-            } else {
-                return;
-            }
-        }
+        if(member.roles.has(clanrole)) member.removeRole(guestrole);
     });
 
     let args = message.content.slice(prefix.length).trim().split(/ +/g)
