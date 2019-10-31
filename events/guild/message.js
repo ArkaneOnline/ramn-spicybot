@@ -7,21 +7,14 @@ module.exports = async (client, message) => {
     if(message.channel.type === 'dm') return message.reply("You must use me in The Ramen Shop Server only!");
 
     let members = message.guild.members;
+    let clanrole = message.guild.roles.find(x => x.name === "RAMN");
+    let guestrole = message.guild.roles.find(x => x.name === "Guest");
     members.forEach(member => {
-        let clanrole = message.guild.roles.find(x => x.name === "RAMN");
-        if(member.user.bot) return;
         if(member.roles.has(clanrole)){
-            if(member.roles.has(message.guild.roles.find(x => x.name === "Guest"))){
-                member.removeRole(message.guild.roles.find(x => x.name === "Guest"))
+            if(member.roles.has(guestrole)){
+                member.removeRole(guestrole)
             } else {
                 return;
-            }
-        }
-        if(!member.roles.has(clanrole)){
-            if(member.roles.has(message.guild.roles.find(x => x.name === "Guest"))){
-                return;
-            } else {
-                member.addRole(message.guild.roles.find(x => x.name === "Guest"))
             }
         }
     });
