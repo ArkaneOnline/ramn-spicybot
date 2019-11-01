@@ -1,3 +1,4 @@
+//requires the packages that will be used throughout this file
 const { readdirSync } = require("fs");
 
 module.exports = (client) => {
