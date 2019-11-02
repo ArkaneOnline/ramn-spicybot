@@ -8,7 +8,7 @@ module.exports = {
     },
     run: async (client, message, args) => {
         message.delete();
-        let hRole = message.guild.roles.find(`name`, "Head Administrator");
+        let hRole = message.guild.roles.find(r => r.name === "Head Administrator");
         let rColor = args[0];
 
         if(!message.member.roles.has(hRole.id)) return message.reply("No.");

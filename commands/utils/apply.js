@@ -23,7 +23,7 @@ module.exports = {
         .addField("Application", application)
         .setTimestamp()
 
-        let mchannel = message.guild.channels.find(`name`, "mod-apps");
+        let mchannel = message.guild.channels.find(c => c.name === "mod-apps");
         mchannel.send(appembed);
         message.reply("You application has been sent!");
     }

@@ -55,7 +55,7 @@ module.exports = {
                 .addField("Reason", reason)
                 .setTimestamp()
 
-                let hChannel = message.guild.channels.find(`name`, "hiatus-alerts");
+                let hChannel = message.guild.channels.find(c => c.name === "hiatus-alerts");
                 hChannel.send(hEmbed)
                 message.channel.bulkDelete(4);
 
