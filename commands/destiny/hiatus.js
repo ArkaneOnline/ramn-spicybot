@@ -11,7 +11,7 @@ module.exports = {
         category: "destiny"
     },
     run: async (client, message, args) => {
-        message.return;
+        await message.delete();
         //gather basic info on the user
         let hUser = message.author;
         if (!message.member.roles.find(r => r.name === "RAMN")) return message.reply("This command can only be used by clan members!");
