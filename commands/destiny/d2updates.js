@@ -6,8 +6,11 @@ module.exports = {
         usage: "",
         category: "destiny"
     },
-    run: async (client, message, agrs) => {
+    run: async (client, message, args) => {
+        //adds the "D2 Updates" role as a variable by finding the ID by name
         let d2role = message.guild.roles.find(x => x.name === "D2 Updates");
+        
+        //checks if the user has the role, and if they do, it removes it, otherwise, it adds it
         if(message.member.roles.has(d2role.id)){
             message.member.removeRole(d2role.id);
             message.reply(`I have removed the ${d2role.name} role from you!`);

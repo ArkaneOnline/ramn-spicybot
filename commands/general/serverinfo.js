@@ -1,3 +1,4 @@
+//stores package data into variables
 const { RichEmbed } = require("discord.js");
 const config = require("../../config.json");
 const moment = require("moment");
@@ -11,7 +12,8 @@ module.exports = {
         category: "general"
     },
     run: async (client, message, args) => {
-        let serverembed = new RichEmbed()
+        //creates an embed with all the information about the current server
+        let serverEmbed = new RichEmbed()
         .setTitle(message.guild.name)
         .setColor(config.colors.yellow)
         .setThumbnail(message.guild.iconURL)
@@ -24,7 +26,10 @@ module.exports = {
         .setTimestamp()
         .setFooter(`Info requested by: ${message.author.username}`, message.author.displayAvatarURL)
 
-        message.channel.send(serverembed);
+        //sends the embed to the current channel
+        message.channel.send(serverEmbed);
+        
+        //stops the code
         return;
     }
 }

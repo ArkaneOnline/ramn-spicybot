@@ -6,19 +6,22 @@ module.exports = {
         usage: "",
         category: "destiny"
     },
-    run: async (client, message, agrs) => {
-        let clanrole = message.guild.roles.find(x => x.name === "Clan Raids");
-        let memberrole = message.guild.roles.find(x => x.name === "RAMN")
+    run: async (client, message, args) => {
+        //finds the roles with the name and sets the ID as a variable
+        let clanRole = message.guild.roles.find(x => x.name === "Clan Raids");
+        let memberRole = message.guild.roles.find(x => x.name === "RAMN")
 
-        if(!message.member.roles.has(memberrole.id)) return message.reply("Only Clan Members may receive this role! \nIf you are a Clan Member, make sure you are registered with <@296023718839451649> (`d!register`) \nIf you are registered, please contact your clan leader for assistance!")
+        //checks if members have the "RAMN" role, if they do, it skips this, if they don't, it says they need to get the RAMN role
+        if(!message.member.roles.has(memberRole.id)) return message.reply("Only Clan Members may receive this role! \nIf you are a Clan Member, make sure you are registered with <@296023718839451649> (`d!register`) \nIf you are registered, please contact your clan leader for assistance!")
 
-        if(message.member.roles.has(clanrole.id)){
-            message.member.removeRole(clanrole.id);
-            message.reply(`I have removed the ${clanrole.name} role from you!`);
+        //checks if the user has the "Clan Raids" role, and if they do, it removes the role, if they don't, it adds the role
+        if(message.member.roles.has(clanRole.id)){
+            message.member.removeRole(clanRole.id);
+            message.reply(`I have removed the ${clanRole.name} role from you!`);
             return;
         } else {
-            message.member.addRole(clanrole.id);
-            message.reply(`I have added the ${clanrole.name} role to you!`);
+            message.member.addRole(clanRole.id);
+            message.reply(`I have added the ${clanRole.name} role to you!`);
             return;
         }
     }

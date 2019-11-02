@@ -6,15 +6,18 @@ module.exports = {
         usage: "",
         category: "destiny"
     },
-    run: async (client, message, agrs) => {
-        let lfgrole = message.guild.roles.find(x => x.name === "LFG");
-        if(message.member.roles.has(lfgrole.id)){
-            message.member.removeRole(lfgrole.id);
-            message.reply(`I have removed the ${lfgrole.name} role from you!`);
+    run: async (client, message, args) => {
+        //stores the "LFG" role into a variable
+        let lfgRole = message.guild.roles.find(x => x.name === "LFG");
+        
+        //checks if a user has the "LFG" role, and if they do, it removes it, otherwise, it adds it
+        if(message.member.roles.has(lfgRole.id)){
+            message.member.removeRole(lfgRole.id);
+            message.reply(`I have removed the ${lfgRole.name} role from you!`);
             return;
         } else {
-            message.member.addRole(lfgrole.id);
-            message.reply(`I have added the ${lfgrole.name} role to you!`);
+            message.member.addRole(lfgRole.id);
+            message.reply(`I have added the ${lfgRole.name} role to you!`);
             return;
         }
     }

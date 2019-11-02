@@ -8,12 +8,12 @@ module.exports = {
     },
     run: async (client, message, args) => {
         message.delete();
-        let hrole = message.guild.roles.find(`name`, "Head Administrator");
-        let rcolor = args[0];
+        let hRole = message.guild.roles.find(`name`, "Head Administrator");
+        let rColor = args[0];
 
-        if(!message.member.roles.has(hrole.id)) return message.reply("No.");
+        if(!message.member.roles.has(hRole.id)) return message.reply("No.");
         else {
-            hrole.setColor(rcolor, "Arkane requests a different color!");
+            hRole.setColor(rColor, "Arkane requests a different color!");
             message.reply("Role color changed!");
         }
     }
