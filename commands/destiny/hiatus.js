@@ -1,4 +1,5 @@
-const Discord = require("discord.js");
+//requires the packages we need and stores them in a variable
+const { RichEmbed } = require("discord.js");
 const config = require("../../config.json");
 
 module.exports = {
@@ -7,14 +8,14 @@ module.exports = {
         aliases: [],
         description: "A command that will tell us when you are on leave from the clan for an extended period of time",
         usage: "",
-        category: "clan"
+        category: "destiny"
     },
     run: async (client, message, args) => {
         message.return;
         //gather basic info on the user
-        let huser = message.author;
+        let hUser = message.author;
         if (!message.member.roles.find(r => r.name === "RAMN")) return message.reply("This command can only be used by clan members!");
-        let joindate = message.member.joinedAt;
+        let joinDate = message.member.joinedAt;
 
         //start the hiatus process
         //gathers the amount of days a user will be gone
@@ -30,7 +31,7 @@ module.exports = {
             }
             let days = collected.first().content;
         
-            //edtis the message
+            //edits the message
             message.channel.send("Please reply with the reason you will be gone! \n Type `cancel` to cancel the process");
 
             //gathers the reason why a user will be gone
@@ -45,17 +46,17 @@ module.exports = {
                 let reason = collected.first().content;
             
                 //creates embed with all the info and sends the info to the specified channel
-                let hembed = new Discord.RichEmbed()
+                let hEmbed = new RichEmbed()
                 .setColor(config.colors.green)
                 .setTitle("Hiatus Request")
-                .addField("User", huser)
-                .addField("Join Date", joindate)
+                .addField("User", hUser)
+                .addField("Join Date", joinDate)
                 .addField("Day Requested", days)
                 .addField("Reason", reason)
                 .setTimestamp()
 
-                let hchannel = message.guild.channels.find(`name`, "hiatus-alerts");
-                hchannel.send(hembed)
+                let hChannel = message.guild.channels.find(c => c.name === "hiatus-alerts");
+                hChannel.send(hEmbed)
                 message.channel.bulkDelete(4);
 
                 message.reply("Your request has been sent!");

@@ -20,7 +20,7 @@ module.exports = {
         if(!args[0]) {
             const categories = readdirSync("./commands/")
 
-            embed.setDescription(`These are the avaliable commands for ${message.guild.me.displayName}\nMy prefix is: **${config.prefix}**\nYou can view more details about a specific command with \`${config.prefix}help <command>\``)
+            embed.setDescription(`These are the available commands for ${message.guild.me.displayName}\nMy prefix is: **${config.prefix}**\nYou can view more details about a specific command with \`${config.prefix}help <command>\``)
             embed.setFooter(`© ${message.guild.me.displayName} | Total Commands: ${client.commands.size}`, client.user.displayAvatarURL);
 
             categories.forEach(category => {

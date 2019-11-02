@@ -1,4 +1,4 @@
-const config = require("../../config.json");
+const { prefix } = require("../../config.json");
 
 module.exports = {
     config: {
@@ -11,7 +11,7 @@ module.exports = {
     run: async (client, message, args) => {
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No.");
         let say = args.join(" ");
-        if(!say) return message.reply(`I need to know what you want me to say! \`${config.prefix}help say\``);
+        if(!say) return message.reply(`I need to know what you want me to say! \`${prefix}help say\``);
 
         await message.delete();
         message.channel.send(say);

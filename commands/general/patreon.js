@@ -1,3 +1,4 @@
+//stores data from packages in a variable
 const { RichEmbed } = require("discord.js");
 const config = require("../../config.json");
 
@@ -10,8 +11,11 @@ module.exports = {
         category: "general"
     },
     run: async (client, message, args) => {
+        //waits for the message to be deleted before continuing
         await message.delete();
-        let patronembed = new RichEmbed()
+
+        //creates an embed with the following fields
+        let patronEmbed = new RichEmbed()
         .setTitle("Patreon")
         .setDescription("https://www.patreon.com/niflonline")
         .setColor(config.colors.red)
@@ -20,8 +24,11 @@ module.exports = {
         .addField("> Cup Ramen Tier Patrons", "None")
         .addField("> Ramen Bowl Tier", "None")
         .addField("> Spicy Ramen Tier", "None")
-        message.channel.send(patronembed);
+        
+        //sends the embed that was just created to the current channel 
+        message.channel.send(patronEmbed);
 
+        //stops the code
         return;
     }
 }
