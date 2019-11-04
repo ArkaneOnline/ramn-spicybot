@@ -15,6 +15,7 @@
     "moment": "^2.24.0",
     "mongoose": "^5.7.7",
     "nekos.life": "^2.0.4",
+    "node-gyp": "^6.0.1",
     "opusscript": "0.0.7",
     "the-traveler": "^1.0.1"
   }
