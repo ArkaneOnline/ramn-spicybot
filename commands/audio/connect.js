@@ -13,6 +13,11 @@ module.exports = {
         let vcName = message.member.voiceChannel.name;
         //stores the voice channel in a variable
         let vc = message.guild.channels.find(x => x.name === `${vcName}`);
+
+        console.log(vcName);
+        console.log(vc);
+
+
         //checks if the channel is joinable
         if(vc !== vc.joinable) return message.reply("That channel is unjoinable");
         //checks if the channel is full
