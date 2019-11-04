@@ -7,6 +7,7 @@ module.exports = {
         category: "mod"
     },
     run: async (client, message, args) => {
+        //refer to ban.js as this is a copy paste of that
         await message.delete();
         const delay = (msec) => new Promise((resolve) => setTimeout(resolve, msec));
         let kicked = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));

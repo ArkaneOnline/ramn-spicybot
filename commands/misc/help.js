@@ -12,6 +12,7 @@ module.exports = {
         category: "misc"
     },
     run: async (client, message, args) => {
+        //im not gonna explain this, you don't need to fuck with this anyways
         const embed = new RichEmbed()
             .setColor(config.colors.purple)
             .setAuthor(`${message.guild.me.displayName} Help`, message.guild.iconURL)
