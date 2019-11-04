@@ -7,6 +7,7 @@ module.exports = {
         category: "mod"
     },
     run: async (client, message, args) => {
+        //inverse of the mute.js file
         await message.delete();
         let unmuted = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         if(!unmuted) return message.reply("Tell me who to unmute! `/unmute @user`");
