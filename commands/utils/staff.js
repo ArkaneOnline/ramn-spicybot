@@ -4,7 +4,7 @@ const { RichEmbed } = require("discord.js");
 module.exports = {
     config: {
         name: "staff",
-        aliases: [],
+        aliases: ["mods"],
         description: "Displays a list of Staff Members and their purpose",
         usage: "",
         category: "utils"
@@ -23,6 +23,7 @@ module.exports = {
         let staffembed = new RichEmbed()
         .setTitle("Staff Members")
         .setURL("https://invite.gg/ramenshop")
+        .setDescription("Below is a list of all of the Ramen Shop Staff members and what their purpose is! Contact any of these guys if you need help!")
         .setThumbnail(message.guild.iconURL)
         .setColor(config.colors.purple)
         .addField("Clan 1 Staff", `${kilmore} and ${neo}`)
