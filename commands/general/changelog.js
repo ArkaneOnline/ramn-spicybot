@@ -22,6 +22,7 @@ module.exports = {
         .setThumbnail(client.user.displayAvatarURL)
         .addField("Finished adding comments", "Helps all the developers too understand how the bot works, `by Arkane`")
         .addField("Add eval", "Bot owner only, `/help eval` for more info, `by Arkane`")
+        .addField("Add welcome and goodbye", "The bot should now send messages in the welcome channel when people join/leave")
         .addBlankField(true)
         .addField("Side note", "If you like Spicy Bot, or our server, you can show your support by donating (`/patreon`) and obtain a special donator role!")
         .setFooter("Proudly made by: The RAMN Team", client.user.avatarURL)
