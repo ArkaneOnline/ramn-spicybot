@@ -1,3 +1,6 @@
+//require ffmpeg
+const ffmpeg = require("ffmpeg");
+
 module.exports = {
     config: {
         name: "connect",
