@@ -1,6 +1,3 @@
-//require ffmpeg
-const ffmpeg = require("ffmpeg-static");
-
 module.exports = {
     config: {
         name: "connect",
