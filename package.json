@@ -11,11 +11,9 @@
   "dependencies": {
     "common-tags": "^1.8.0",
     "discord.js": "^11.5.1",
-    "ffmpeg-binaries": "^3.2.2-3",
     "moment": "^2.24.0",
     "mongoose": "^5.7.7",
     "nekos.life": "^2.0.4",
-    "node-opus": "^0.3.3",
     "the-traveler": "^1.0.1"
   }
 }
