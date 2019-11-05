@@ -16,8 +16,5 @@
     "nekos.life": "^2.0.4",
     "opusscript": "0.0.7",
     "the-traveler": "^1.0.1"
-  },
-  "devDependencies": {
-    "ffmpeg-static": "^2.7.0"
   }
 }
