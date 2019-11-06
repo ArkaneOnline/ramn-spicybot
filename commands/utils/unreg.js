@@ -13,6 +13,8 @@ module.exports = {
         if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("No.");
         //stores the unregistered role into a variable
         let unreg = message.guild.roles.find(r => r.name === "Unregistered");
+        //checks if the unregistered role exists
+        if(!unreg) return message.reply("Fatal error, `Role doesn't exists`, Command: `unreg`");
         //gets how many users have the unregistered role and stores them in a variable
         let count = unreg.members.size;
 

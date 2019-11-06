@@ -19,8 +19,8 @@ module.exports = {
         //stores the number in a variable
         let number = args[0];
         //deletes the messages specified
-        message.channel.bulkDelete(number);
+        message.channel.bulkDelete(number, true);
         //lets us know the messages have been deleted, then deletes itself
-        message.reply(`Cleared ${number} messages! \nMessages older than 14 days old cannot be cleared`).then(msg => msg.delete(8000));
+        message.reply(`Cleared ${number} messages!`).then(msg => msg.delete(8000));
     }
 }
