@@ -15,6 +15,26 @@ module.exports = async (client, message) => {
         "Invite your friends!",
         "Titan main, tiny brain",
         "Can we get an async for each function?",
+        "Arkane barely plays destiny recently",
+        "Warlocks are no longer viable small brain",
+        "twitch.tv/arkanelive",
+        `${prefix}clanraids`,
+        `${prefix}d2updates`,
+        `${prefix}hiatus`,
+        `${prefix}joinclan`,
+        `${prefix}lfg`,
+        `${prefix}avatar`,
+        `${prefix}changelog`,
+        `${prefix}patreon`,
+        `${prefix}ping`,
+        `${prefix}serverinfo`,
+        `${prefix}uptime`,
+        `${prefix}userinfo`,
+        `${prefix}apply`,
+        `${prefix}staff`,
+        `${prefix}steam`,
+        `${prefix}suggest`,
+        `${prefix}xur`
     ]
 
     //creates a loop that will fire every 60 seconds
