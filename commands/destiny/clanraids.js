@@ -1,3 +1,5 @@
+const config = require("../../config.json");
+
 module.exports = {
     config: {
         name: "clanraids",
@@ -10,6 +12,10 @@ module.exports = {
         //finds the roles with the name and sets the ID as a variable
         let clanRole = message.guild.roles.find(x => x.name === "Clan Raids");
         let memberRole = message.guild.roles.find(x => x.name === "RAMN")
+
+        //checks if the roles exists
+        if(!clanRole) return message.reply(`${config.importantIDs.staffIDs.arkane}, I have encountered an error that shouldn't ever happen! Command Name: \`${prefix}clanraids\`, Error message, \`Role doesn't exist\` \n${message.author}, Sorry for the inconvinience, my teams are getting to work right away!`);
+        if(!memberRole) return message.reply(`${config.importantIDs.staffIDs.arkane}, I have encountered an error that shouldn't ever happen! Command Name: \`${prefix}clanraids\`, Error message, \`Role doesn't exist\` \n${message.author}, Sorry for the inconvinience, my teams are getting to work right away!`);
 
         //checks if members have the "RAMN" role, if they do, it skips this, if they don't, it says they need to get the RAMN role
         if(!message.member.roles.has(memberRole.id)) return message.reply("Only Clan Members may receive this role! \nIf you are a Clan Member, make sure you are registered with <@296023718839451649> (`d!register`) \nIf you are registered, please contact your clan leader for assistance!")
