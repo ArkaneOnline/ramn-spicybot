@@ -10,7 +10,8 @@ module.exports = async (client, member) => {
         `**${member.user.username}** has left your fireteam!`,
         `**${member.user.username}**, Error code: weasel!`,
         `**${member.user.username}** was hit with a drop pod!`,
-        `**${member.user.username}** went to go solo Oryx!`
+        `**${member.user.username}** went to go solo Oryx!`,
+        `**${member.user.username}** challenged the architects!`
     ];
     if(!welcomeChannel) return;
     const message = Math.floor(Math.random() * (messages.length - 1) + 1);
