@@ -38,7 +38,7 @@ module.exports = {
         //waits 500ms so that rate limits dont occur
         await delay(500);
         //lets us know that the user has been successfully banned
-        message.reply("User banned!");
+        message.reply(`${banned.name} banned!`);
         //bans the user and logs the reason to the audit logs
         message.guild.member(banned).ban(banreason);
         return;

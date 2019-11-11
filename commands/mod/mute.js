@@ -34,7 +34,7 @@ module.exports = {
         }
     
         //tells the user that the person was successfully muted
-        message.reply("User has been muted!");
+        message.reply(`${muted} has been muted!`);
         return;
     }
 }

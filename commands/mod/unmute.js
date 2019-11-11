@@ -28,7 +28,7 @@ module.exports = {
             console.log(e.stack);
         }
     
-        message.reply("User has been unmuted!");
+        message.reply(`${unmuted} has been unmuted!`);
         return;
     }
 }

@@ -21,7 +21,7 @@ module.exports = {
     
         kicked.send(`You have been kicked from **${message.channel.guild.name}** for the reason: **${kickreason}**`)
         await delay(500);
-        message.reply("User kicked!");
+        message.reply(`${kicked.name} kicked!`);
         message.guild.member(kicked).kick(kickreason);
         return;
     }
