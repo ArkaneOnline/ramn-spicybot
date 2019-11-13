@@ -1,5 +1,3 @@
-const { prefix } = require("../../config.json");
-
 module.exports = async (client, member) => {
     //defines the #welcome channel
     const welcomeChannel = member.guild.channels.find(x => x.name === "welcome");
