@@ -11,6 +11,6 @@ module.exports = async (client, member) => {
     if(!gettingStarted) return;
     //sends a message to the #welcome channel
     welcomeChannel.send(`Welcome to the server ${member}! \nPlease take a minute to look at the ${gettingStarted} channel to get setup!`);
-    //stops the code>
+    //stops the code
     return;
 }
