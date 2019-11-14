@@ -17,7 +17,11 @@ module.exports = async (client, message) => {
     //defines the command file by the name of the command we grabbed earlier
     let commandfile = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd))
     //logs the command to the console
-    if(commandfile) console.log(`Command used: ${cmd}, with arguments: ${args}`)
+    if(args){ 
+        if(commandfile) console.log(`Command used: ${cmd}, with arguments: ${args}`)
+    } else {
+        if(commandfile) console.log(`Command used: ${cmd}, with arguments: null`)
+    }
     //runs the command file and passes the "client", "message", and "args" variables to the file
     if(commandfile) commandfile.run(client, message, args)
 }
