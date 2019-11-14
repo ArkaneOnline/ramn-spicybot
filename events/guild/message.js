@@ -14,7 +14,7 @@ module.exports = async (client, message) => {
         //checks if the role exists
         if (!unreg) return message.reply(`Fatal Error, \`Role doesn't exist\`, @Spicy Bot Developer`);
         //checks if the message author has the role, if they do, sends them a dm
-        if (message.member.roles.has(unreg)) message.member.send(`Hello ${message.author}! \nIt seems like you are not registered with Charlemange in our server! We kindly ask that you register ASAP! \nTo do so, head over to the #commands channel, and type \`d!register\` to get started!`)
+        if (message.member.roles.has(unreg)) message.author.send(`Hello ${message.author}! \nIt seems like you are not registered with Charlemange in our server! We kindly ask that you register ASAP! \nTo do so, head over to the #commands channel, and type \`d!register\` to get started!`)
     }
 
 
