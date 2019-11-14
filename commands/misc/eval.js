@@ -11,7 +11,7 @@ module.exports = {
     },
     run: async (client, message, args) => {
         //checks if the authors id is equal to arkanes id
-        if(message.author.id !== config.importantIDs.staffIDs.arkane) return message.reply("This command is locked to the bot owner only!");
+        // if(message.author.id !== config.importantIDs.staffIDs.arkane) return message.reply("This command is locked to the bot owner only!");
         //joins the arguments together
         let toEval = args.join(" ");
         //executes the code and stores the result in a variable
