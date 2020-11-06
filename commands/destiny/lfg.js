@@ -3,7 +3,7 @@ module.exports = {
         name: "lfg",
         aliases: [],
         description: "Adds/Removes yourself from the <@&639567619774611476> role",
-        usage: "lfg",
+        usage: "(none)",
         category: "destiny"
     },
     run: async (client, message, args) => {
