@@ -4,8 +4,9 @@
   "description": "A Discord Bot for The Spiciest Ramen Shop Discord Server",
   "main": "app.js",
   "dependencies": {
-    "discord.js": "^12.4.1",
-    "common-tags": "^1.8.0"
+    "common-tags": "^1.8.0",
+    "cron": "^1.8.2",
+    "discord.js": "^12.4.1"
   },
   "devDependencies": {},
   "scripts": {
