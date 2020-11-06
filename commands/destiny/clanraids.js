@@ -3,7 +3,7 @@ module.exports = {
         name: "clanraids",
         aliases: [],
         description: "Adds/Removes yourself from the <@&639549517452279810> role",
-        usage: "",
+        usage: "clanraids",
         category: "destiny"
     },
     run: async (client, message, args) => {
