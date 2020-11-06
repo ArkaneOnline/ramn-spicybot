@@ -9,7 +9,7 @@ module.exports = {
     run: async (client, message, args) => {
         let lfgrole = message.guild.roles.cache.find(role => role.name === "LFG");
 
-        if (!message.member.roles.cache.has(lfgrole)) {
+        if (!message.member.roles.cache.has(lfgrole.id)) {
             message.member.roles.add(lfgrole, "Spicy Bot automatic role assign. Self Assigned user role.")
             message.reply("I have added the `LFG` role to you!");
         } else {
