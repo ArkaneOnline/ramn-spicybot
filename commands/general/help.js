@@ -15,14 +15,14 @@ module.exports = {
         //im not gonna explain this, you don't need to fuck with this anyways
         const embed = new MessageEmbed()
             .setColor(config.colors.purple)
-            .setAuthor(`${message.guild.me.displayName} Help`, message.guild.iconURL)
-            .setThumbnail(client.user.displayAvatarURL)
+            .setAuthor(`${message.guild.me.displayName} Help`, message.guild.iconURL())
+            .setThumbnail(client.user.displayAvatarURL())
 
         if(!args[0]) {
             const categories = readdirSync("./commands/")
 
             embed.setDescription(`These are the available commands for ${message.guild.me.displayName}\nMy prefix is: **${config.prefix}**\nYou can view more details about a specific command with \`${config.prefix}help <command>\``)
-            embed.setFooter(`© ${message.guild.me.displayName} | Total Commands: ${client.commands.size}`, client.user.displayAvatarURL);
+            embed.setFooter(`© ${message.guild.me.displayName} | Total Commands: ${client.commands.size}`, client.user.displayAvatarURL());
 
             categories.forEach(category => {
                 const dir = client.commands.filter(c => c.config.category === category)
@@ -44,7 +44,7 @@ module.exports = {
             **Command:** ${command.name.slice(0, 1).toUpperCase() + command.name.slice(1)}
             **Description:** ${command.description || "No Description provided."}
             **Usage:** ${command.usage ? `\`${config.prefix}${command.name} ${command.usage}\`` : "No Usage"}
-            **Aliases:** ${command.aliases ? command.aliases.join(", ") : "None."}`).setFooter("<command> = required, (command) = optional", client.user.displayAvatarURL)
+            **Aliases:** ${command.aliases ? command.aliases.join(", ") : "None."}`).setFooter("<command> = required, (command) = optional", client.user.displayAvatarURL())
 
             return message.channel.send(embed)
         }
