@@ -5,5 +5,9 @@ module.exports = {
         description: "hi",
         usage: "",
         category: "general"
+    },
+    run: async (client, message, args) => {
+        message.channel.send("hi.");
+        return;
     }
 }
