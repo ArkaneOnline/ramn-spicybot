@@ -1,35 +1,21 @@
 {
     "prefix": "/",
     "colors": {
-        "green": "#00FF00",
-        "yellow": "#FFFF00",
-        "red": "#FF0000",
-        "blue": "#0000FF",
-        "purple": "#8A2BE2",
-        "white": "#FFFFFF",
-        "black": "#000000"
-    },
-    "importantIDs": {
-        "staffIDs": {
-            "arkane": "208779984276291585",
-            "neo": "312775218277908480",
-            "kilmore": "214914406042042368",
-            "faded": "199287778226339841",
-            "tool": "90876073151049728",
-            "vinyl": "305593869146390529",
-            "birdman": "251112731464302592"
-        },
-        "developerIDs": {
-            "blaziken": "271076489024372737",
-            "faded": "199287778226339841"
-        },
-        "channelIDs": {
-            "modApplications": "522544325725257730",
-            "hiatusAlerts": "616417986328395776"
-        }
-    },
-    "botIDs": {
-        "clientID": "616375934915969041",
-        "permissionsInteger": "8"
+        "brightred": "#ff4a4a",
+        "darkred": "#940303",
+        "red": "#ff0000",
+        "brightblue": "#00f7ff",
+        "darkblue": "#000078",
+        "blue": "#0000ff",
+        "yellow": "#ffff00",
+        "orange": "#ffb300",
+        "green": "#26ff00",
+        "brightgreen": "#7bff63",
+        "darkgreen": "#106b00",
+        "purple": "#8c00ff",
+        "brightpurple": "#cb5cff",
+        "darkpurple": "#3f005c",
+        "pink": "#ff00bb",
+        "brightpink": "#ff45cd"
     }
 }
