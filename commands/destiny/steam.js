@@ -15,5 +15,7 @@ module.exports = {
                 name: "steam.png"
             }]
         });
+        
+        return;
     }
 }
