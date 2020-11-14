@@ -10,12 +10,13 @@ let xurMessage = new cron.CronJob('00 05 11 * * 5', () => {
     resetChannel.send("https://wherethefuckisxur.com");
 }, null, true, 'America/Chicago');
 
-let unregisteredMessage = new cron.CronJob('00 00 12 * * 6', () => {
-    let unregisteredRole = ramenShop.roles.cache.get("");
+let unregisteredMessage = new cron.CronJob('00 00 15 * * *', () => {
+    let unregisteredRole = ramenShop.roles.cache.get("776988950929473596");
     announcementChannel.send(`${unregisteredRole}, please make sure you head over to #commands and type \`d!register\`. \nCharlemange will DM you with a link to link your Destiny and Discord accounts together!`);
 }, null, true, 'America/Chicago');
 
 xurMessage.start();
+unregisteredMessage.start();
 
 ["commands", "aliases"].forEach(x => client[x] = new Collection());
 ["command", "event"].forEach(x => require(`./handlers/${x}`)(client));
