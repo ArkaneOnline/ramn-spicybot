@@ -4,7 +4,7 @@ const client = new Client();
 
 var ramenShop = client.guilds.cache.get("511289361178820618");
 
-let xurMessage = new cron.CronJob('00 05 11 * * 5', () => {
+let xurMessage = new cron.CronJob('00 10 11 * * 5', () => {
     var resetChannel = ramenShop.channels.cache.get("548999830048079875");
     resetChannel.send("https://wherethefuckisxur.com");
 }, null, true, 'America/Chicago');
