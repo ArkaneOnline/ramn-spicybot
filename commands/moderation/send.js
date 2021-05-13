@@ -17,6 +17,6 @@ module.exports = {
         console.log(sentto);
         sentto.send(sendmessage);
 
-        return;
+        return message.reply("Your message has been sent!");
     }
 }
