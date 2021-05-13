@@ -11,10 +11,11 @@ module.exports = {
         if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Insufficient Permissions: Administrator");
         if(!args[0]) return message.reply(`Incorrect Usage: \`${prefix}send @user message\``);
 
-        let user = args[0];
+        let sentto = args[0];
         let sendmessage = args.join(" ").slice(22);
 
-        user.send(sendmessage);
+        console.log(sentto);
+        sentto.send(sendmessage);
 
         return;
     }
