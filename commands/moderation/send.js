@@ -11,7 +11,7 @@ module.exports = {
         if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Insufficient Permissions: Administrator");
         if(!args[0]) return message.reply(`Incorrect Usage: \`${prefix}send @user message\``);
 
-        let sentto = client.users.cache.get(args[0]);
+        let sentto = message.mentions.users.first().id
         let sendmessage = args.join(" ").slice(22);
 
         console.log(sentto);
