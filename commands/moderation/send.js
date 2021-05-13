@@ -8,7 +8,7 @@ module.exports = {
         category: "moderation"
     },
     run: async (client, message, args) => {
-        if(!message.author.hasPermission("ADMINISTRATOR")) return message.reply("Insufficient Permissions: Administrator");
+        if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Insufficient Permissions: Administrator");
         if(!args[0]) return message.reply(`Incorrect Usage: \`${prefix}send @user message\``);
 
         let user = args[0];
