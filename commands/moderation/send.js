@@ -13,8 +13,6 @@ module.exports = {
 
         let sentto = client.users.cache.get(message.mentions.users.first().id);
         let sendmessage = args.join(" ").slice(22);
-
-        console.log(sentto);
         sentto.send(sendmessage);
 
         return message.reply("Your message has been sent!");
