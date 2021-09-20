@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/app.js",
+  "engines": {
+    "node": "16.7.0",
+    "npm": "*"
+  },
   "scripts": {
     "app": "node ."
   },
