@@ -123,15 +123,15 @@ module.exports = {
         }
 
         //testing
-        if(choice1) console.log(choice1);
-        if(choice2) console.log(choice2);
-        if(choice3) console.log(choice3);
-        if(choice4) console.log(choice4);
-        if(choice5) console.log(choice5);
-        if(choice6) console.log(choice6);
-        if(choice7) console.log(choice7);
-        if(choice8) console.log(choice8);
-        if(choice9) console.log(choice9);
+        if(choice1) console.log(`Choice 1: ${choice1}`);
+        if(choice2) console.log(`Choice 2: ${choice2}`);
+        if(choice3) console.log(`Choice 3: ${choice3}`);
+        if(choice4) console.log(`Choice 4: ${choice4}`);
+        if(choice5) console.log(`Choice 5: ${choice5}`);
+        if(choice6) console.log(`Choice 6: ${choice6}`);
+        if(choice7) console.log(`Choice 7: ${choice7}`);
+        if(choice8) console.log(`Choice 8: ${choice8}`);
+        if(choice9) console.log(`Choice 9: ${choice9}`);
 
         let pollembed = new MessageEmbed().setTitle("Poll").setDescription(`${content}`).setColor("BLURPLE").setTimestamp();
         const msg = await interaction.channel.send({ embeds: [pollembed] });
