@@ -148,18 +148,18 @@ module.exports = {
             .setTitle("Poll")
             .setColor("GREEN")
             .setDescription(content)
-            .addField(`1️⃣ **${choice1}**`)
-            .addField(`2️⃣ **${choice2}**`)
+            .addField(`1️⃣ **Choice 1**`, choice1)
+            .addField(`2️⃣ **Choice 2**`, choice2)
             .setFooter(`${client.user.username} polls`, client.user.avatarURL)
             .setTimestamp()
 
-        if(choice3) pollembed.addField(`3️⃣ **${choice3}**`);
-        if(choice4) pollembed.addField(`4️⃣ **${choice4}**`);
-        if(choice5) pollembed.addField(`5️⃣ **${choice5}**`);
-        if(choice6) pollembed.addField(`6️⃣ **${choice6}**`);
-        if(choice7) pollembed.addField(`7️⃣ **${choice7}**`);
-        if(choice8) pollembed.addField(`8️⃣ **${choice8}**`);
-        if(choice9) pollembed.addField(`9️⃣ **${choice9}**`);
+        if(choice3) pollembed.addField(`3️⃣ **Choice 3**`, choice3);
+        if(choice4) pollembed.addField(`4️⃣ **Choice 4**`, choice4);
+        if(choice5) pollembed.addField(`5️⃣ **Choice 5**`, choice5);
+        if(choice6) pollembed.addField(`6️⃣ **Choice 6**`, choice6);
+        if(choice7) pollembed.addField(`7️⃣ **Choice 7**`, choice7);
+        if(choice8) pollembed.addField(`8️⃣ **Choice 8**`, choice8);
+        if(choice9) pollembed.addField(`9️⃣ **Choice 9**`, choice9);
 
         //send embed
         const msg = await interaction.channel.send({ embeds: [pollembed] });
