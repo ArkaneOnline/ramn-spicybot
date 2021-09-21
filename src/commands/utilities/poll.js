@@ -143,21 +143,39 @@ module.exports = {
             }
         }
 
-        //testing
-        if(choice1) console.log(`Choice 1: ${choice1}`);
-        if(choice2) console.log(`Choice 2: ${choice2}`);
-        if(choice3) console.log(`Choice 3: ${choice3}`);
-        if(choice4) console.log(`Choice 4: ${choice4}`);
-        if(choice5) console.log(`Choice 5: ${choice5}`);
-        if(choice6) console.log(`Choice 6: ${choice6}`);
-        if(choice7) console.log(`Choice 7: ${choice7}`);
-        if(choice8) console.log(`Choice 8: ${choice8}`);
-        if(choice9) console.log(`Choice 9: ${choice9}`);
+        //create embed
+        let pollembed = new MessageEmbed()
+            .setTitle("Poll")
+            .setColor("GREEN")
+            .setDescription(content)
+            .addField(`1️⃣ **${choice1}**`)
+            .addField(`2️⃣ **${choice2}**`)
+            .setFooter(`${client.user.username} polls`, client.user.avatarURL)
+            .setTimestamp()
 
-        let pollembed = new MessageEmbed().setTitle("Poll").setDescription(`${content}`).setColor("BLURPLE").setTimestamp();
+        if(choice3) pollembed.addField(`3️⃣ **${choice3}**`);
+        if(choice4) pollembed.addField(`4️⃣ **${choice4}**`);
+        if(choice5) pollembed.addField(`5️⃣ **${choice5}**`);
+        if(choice6) pollembed.addField(`6️⃣ **${choice6}**`);
+        if(choice7) pollembed.addField(`7️⃣ **${choice7}**`);
+        if(choice8) pollembed.addField(`8️⃣ **${choice8}**`);
+        if(choice9) pollembed.addField(`9️⃣ **${choice9}**`);
+
+        //send embed
         const msg = await interaction.channel.send({ embeds: [pollembed] });
-        msg.react("✅");
-        msg.react("❌");
+        
+        //add reactions to embed
+        msg.react("1️⃣");
+        msg.react("2️⃣");
+        if(choice3) msg.react("3️⃣");
+        if(choice4) msg.react("4️⃣");
+        if(choice5) msg.react("5️⃣");
+        if(choice6) msg.react("6️⃣");
+        if(choice7) msg.react("7️⃣");
+        if(choice8) msg.react("8️⃣");
+        if(choice9) msg.react("9️⃣");
+
+        //end the interation
         interaction.reply({
             content: "Poll Created!",
             ephemeral: true
