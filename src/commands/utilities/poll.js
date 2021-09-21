@@ -15,7 +15,7 @@ module.exports = {
         .addStringOption(option => option.setName("choice7").setDescription("One of the choices users can choose in your poll").setRequired(false))
         .addStringOption(option => option.setName("choice8").setDescription("One of the choices users can choose in your poll").setRequired(false))
         .addStringOption(option => option.setName("choice9").setDescription("One of the choices users can choose in your poll").setRequired(false)),
-    async execute(interaction, client) {
+    async execute(interaction) {
         if(!interaction.member.permissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) return interaction.reply({
             content: "You do not have permission to perform this action",
             ephemeral: true
@@ -150,7 +150,7 @@ module.exports = {
             .setDescription(content)
             .addField(`1️⃣ **Choice 1**`, choice1)
             .addField(`2️⃣ **Choice 2**`, choice2)
-            .setFooter(`${client.user.username} polls`, client.user.avatarURL)
+            .setFooter(`${interaction.client.user.username} polls`, interaction.client.user.avatarURL)
             .setTimestamp()
 
         if(choice3) pollembed.addField(`3️⃣ **Choice 3**`, choice3);
