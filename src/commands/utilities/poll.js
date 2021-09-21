@@ -15,7 +15,7 @@ module.exports = {
         .addStringOption(option => option.setName("choice7").setDescription("One of the choices users can choose in your poll").setRequired(false))
         .addStringOption(option => option.setName("choice8").setDescription("One of the choices users can choose in your poll").setRequired(false))
         .addStringOption(option => option.setName("choice9").setDescription("One of the choices users can choose in your poll").setRequired(false)),
-    async execute(interaction) {
+    async execute(interaction, client) {
         if(!interaction.member.permissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) return interaction.reply({
             content: "You do not have permission to perform this action",
             ephemeral: true
