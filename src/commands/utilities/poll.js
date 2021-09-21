@@ -102,6 +102,7 @@ module.exports = {
                     } else {
                         if(!choice3){
                             choice3 = choice6;
+                            choice6 = null;
                         } else {
                             if(!choice4){
                                 choice4 = choice6;
