@@ -45,20 +45,26 @@ module.exports = {
                                 } else {
                                     if(!choice3){
                                         choice3 = choice9;
+                                        choice9 = null;
                                     } else {
                                         if(!choice4){
                                             choice4 = choice9;
+                                            choice9 = null;
                                         } else {
                                             if(!choice5){
                                                 choice5 = choice9;
+                                                choice9 = null;
                                             } else {
                                                 if(choice6){
                                                     choice6 = choice9;
+                                                    choice9 = null;
                                                 } else {
                                                     if(!choice7){
                                                         choice7 = choice9;
+                                                        choice9 = null;
                                                     } else {
                                                         choice8 = choice9;
+                                                        choice9 = null;
                                                     }
                                                 }
                                             }
@@ -68,17 +74,22 @@ module.exports = {
                             } else {
                                 if(!choice3){
                                     choice3 = choice8;
+                                    choice8 = null;
                                 } else {
                                     if(!choice4){
                                         choice4 = choice8;
+                                        choice8 = null;
                                     } else {
                                         if(!choice5){
                                             choice5 = choice8;
+                                            choice8 = null;
                                         } else {
                                             if(!choice6){
                                                 choice6 = choice8;
+                                                choice8 = null;
                                             } else {
                                                 choice7 = choice8;
+                                                choice8 = null;
                                             }
                                         }
                                     }
@@ -87,14 +98,18 @@ module.exports = {
                         } else {
                             if(!choice3){
                                 choice3 = choice7;
+                                choice7 = null;
                             } else {
                                 if(!choice4){
                                     choice4 = choice7;
+                                    choice7 = null;
                                 } else {
                                     if(!choice5){
                                         choice5 = choice7;
+                                        choice7 = null;
                                     } else {
                                         choice6 = choice7;
+                                        choice7 = null;
                                     }
                                 }
                             }
@@ -106,20 +121,25 @@ module.exports = {
                         } else {
                             if(!choice4){
                                 choice4 = choice6;
+                                choice6 = null;
                             } else {
                                 choice5 = choice6;
+                                choice6 = null;
                             }
                         }
                     }
                 } else {
                     if(!choice3){
                         choice3 = choice5;
+                        choice5 = null;
                     } else {
-                        choice5 = choice4;
+                        choice4 = choice5;
+                        choice5 = null;
                     }
                 }
             } else {
                 choice3 = choice4;
+                choice4 = null;
             }
         }
 
