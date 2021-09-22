@@ -22,7 +22,7 @@ module.exports = {
                 .setFooter(`Information gathered by ${interaction.client.user.username}`, interaction.client.user.avatarURL({ format: "png" }))
                 .setTimestamp();
 
-            interaction.reply({ embeds: [embded] });
+            interaction.reply({ embeds: [embed] });
         } else {
             let embed = new MessageEmbed()
                 .setThumbnail(target.user.avatarURL({ format: "png" }))
