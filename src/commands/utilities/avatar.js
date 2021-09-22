@@ -10,11 +10,11 @@ module.exports = {
         let target = interaction.options.getMember("user");
 
         if(!target) {
-            let avatar = interaction.member.user.avatarURL();
+            let avatar = interaction.member.user.avatarURL({ format: "png" });
             interaction.reply(`Here is a link to your avatar: ${avatar}`);
         } else {
-            let avatar = target.user.avatarURL();
-            interaction.reply(`Here is a link to ${target.user.username}'s avatar: ${avatar}'`);
+            let avatar = target.user.avatarURL({ format: "png" });
+            interaction.reply(`Here is a link to ${target.user.username}'s avatar: ${avatar}`);
         }
     }
 }
