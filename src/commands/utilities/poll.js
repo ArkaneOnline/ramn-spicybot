@@ -36,10 +36,7 @@ module.exports = {
         //checking
         let choiceArray = [choice3, choice4, choice5, choice6, choice7, choice8, choice9];
         choiceArray.forEach(element => {
-            if(!element) {
-                choiceArray.filter(item => !element.includes(item))
-                console.log(choiceArray);
-            }
+            console.log(element);
         });
 
         //doing the illegal for checking purposes
