@@ -37,7 +37,13 @@ module.exports = {
         let choiceArray = [choice3, choice4, choice5, choice6, choice7, choice8, choice9];
         var filteredChoiceArray = choiceArray.filter(element => element !== null);
 
-        console.log(filteredChoiceArray);
+        if(filteredChoiceArray[0]) choice3 = filteredChoiceArray[0];
+        if(filteredChoiceArray[1]) choice4 = filteredChoiceArray[1];
+        if(filteredChoiceArray[2]) choice5 = filteredChoiceArray[2];
+        if(filteredChoiceArray[3]) choice6 = filteredChoiceArray[3];
+        if(filteredChoiceArray[4]) choice7 = filteredChoiceArray[4];
+        if(filteredChoiceArray[5]) choice8 = filteredChoiceArray[5];
+        if(filteredChoiceArray[6]) choice9 = filteredChoiceArray[6];
 
         //doing the illegal for checking purposes
         // if(!choice3){
