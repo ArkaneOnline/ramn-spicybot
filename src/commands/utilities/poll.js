@@ -57,7 +57,7 @@ module.exports = {
             .setDescription(content)
             .addField(`1️⃣ **Choice 1**`, choice1)
             .addField(`2️⃣ **Choice 2**`, choice2)
-            .setFooter(`${interaction.client.user.username} polls`, interaction.client.user.avatarURL)
+            .setFooter(`${interaction.client.user.username} Poll Creation System`, interaction.client.user.avatarURL)
             .setTimestamp()
 
         if(choice3) pollembed.addField(`3️⃣ **Choice 3**`, choice3);
