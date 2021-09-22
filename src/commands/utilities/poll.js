@@ -16,11 +16,6 @@ module.exports = {
         .addStringOption(option => option.setName("choice8").setDescription("One of the choices users can choose in your poll").setRequired(false))
         .addStringOption(option => option.setName("choice9").setDescription("One of the choices users can choose in your poll").setRequired(false)),
     async execute(interaction) {
-        if(!interaction.member.permissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) return interaction.reply({
-            content: "You do not have permission to perform this action",
-            ephemeral: true
-        })
-        
         //add choices and message to variables
         let content = interaction.options.getString("content");
         let choice1 = interaction.options.getString("choice1");
@@ -54,116 +49,6 @@ module.exports = {
         if(filteredChoiceArray[4]) choice7 = filteredChoiceArray[4];
         if(filteredChoiceArray[5]) choice8 = filteredChoiceArray[5];
         if(filteredChoiceArray[6]) choice9 = filteredChoiceArray[6];
-
-        //doing the illegal for checking purposes
-        // if(!choice3){
-        //     if(!choice4){
-        //         if(!choice5){
-        //             if(!choice6){
-        //                 if(!choice7){
-        //                     if(!choice8){
-        //                         if(!choice9){
-        //                             console.log("Poll with no additional choiced created");
-        //                         } else {
-        //                             if(!choice3){
-        //                                 choice3 = choice9;
-        //                                 choice9 = null;
-        //                             } else {
-        //                                 if(!choice4){
-        //                                     choice4 = choice9;
-        //                                     choice9 = null;
-        //                                 } else {
-        //                                     if(!choice5){
-        //                                         choice5 = choice9;
-        //                                         choice9 = null;
-        //                                     } else {
-        //                                         if(choice6){
-        //                                             choice6 = choice9;
-        //                                             choice9 = null;
-        //                                         } else {
-        //                                             if(!choice7){
-        //                                                 choice7 = choice9;
-        //                                                 choice9 = null;
-        //                                             } else {
-        //                                                 choice8 = choice9;
-        //                                                 choice9 = null;
-        //                                             }
-        //                                         }
-        //                                     }
-        //                                 }
-        //                             }
-        //                         }
-        //                     } else {
-        //                         if(!choice3){
-        //                             choice3 = choice8;
-        //                             choice8 = null;
-        //                         } else {
-        //                             if(!choice4){
-        //                                 choice4 = choice8;
-        //                                 choice8 = null;
-        //                             } else {
-        //                                 if(!choice5){
-        //                                     choice5 = choice8;
-        //                                     choice8 = null;
-        //                                 } else {
-        //                                     if(!choice6){
-        //                                         choice6 = choice8;
-        //                                         choice8 = null;
-        //                                     } else {
-        //                                         choice7 = choice8;
-        //                                         choice8 = null;
-        //                                     }
-        //                                 }
-        //                             }
-        //                         }
-        //                     }
-        //                 } else {
-        //                     if(!choice3){
-        //                         choice3 = choice7;
-        //                         choice7 = null;
-        //                     } else {
-        //                         if(!choice4){
-        //                             choice4 = choice7;
-        //                             choice7 = null;
-        //                         } else {
-        //                             if(!choice5){
-        //                                 choice5 = choice7;
-        //                                 choice7 = null;
-        //                             } else {
-        //                                 choice6 = choice7;
-        //                                 choice7 = null;
-        //                             }
-        //                         }
-        //                     }
-        //                 }
-        //             } else {
-        //                 if(!choice3){
-        //                     choice3 = choice6;
-        //                     choice6 = null;
-        //                 } else {
-        //                     if(!choice4){
-        //                         choice4 = choice6;
-        //                         choice6 = null;
-        //                     } else {
-        //                         choice5 = choice6;
-        //                         choice6 = null;
-        //                     }
-        //                 }
-        //             }
-        //         } else {
-        //             if(!choice3){
-        //                 choice3 = choice5;
-        //                 choice5 = null;
-        //             } else {
-        //                 choice4 = choice5;
-        //                 choice5 = null;
-        //             }
-        //         }
-        //     } else {
-        //         choice3 = choice4;
-        //         choice4 = null;
-        //     }
-        // }
 
         //create embed
         let pollembed = new MessageEmbed()
