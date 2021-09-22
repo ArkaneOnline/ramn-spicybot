@@ -33,115 +33,124 @@ module.exports = {
         let choice8 = interaction.options.getString("choice8");
         let choice9 = interaction.options.getString("choice9");
 
-        //doing the illegal for checking purposes
-        if(!choice3){
-            if(!choice4){
-                if(!choice5){
-                    if(!choice6){
-                        if(!choice7){
-                            if(!choice8){
-                                if(!choice9){
-                                    console.log("Poll with no additional choiced created");
-                                } else {
-                                    if(!choice3){
-                                        choice3 = choice9;
-                                        choice9 = null;
-                                    } else {
-                                        if(!choice4){
-                                            choice4 = choice9;
-                                            choice9 = null;
-                                        } else {
-                                            if(!choice5){
-                                                choice5 = choice9;
-                                                choice9 = null;
-                                            } else {
-                                                if(choice6){
-                                                    choice6 = choice9;
-                                                    choice9 = null;
-                                                } else {
-                                                    if(!choice7){
-                                                        choice7 = choice9;
-                                                        choice9 = null;
-                                                    } else {
-                                                        choice8 = choice9;
-                                                        choice9 = null;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            } else {
-                                if(!choice3){
-                                    choice3 = choice8;
-                                    choice8 = null;
-                                } else {
-                                    if(!choice4){
-                                        choice4 = choice8;
-                                        choice8 = null;
-                                    } else {
-                                        if(!choice5){
-                                            choice5 = choice8;
-                                            choice8 = null;
-                                        } else {
-                                            if(!choice6){
-                                                choice6 = choice8;
-                                                choice8 = null;
-                                            } else {
-                                                choice7 = choice8;
-                                                choice8 = null;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        } else {
-                            if(!choice3){
-                                choice3 = choice7;
-                                choice7 = null;
-                            } else {
-                                if(!choice4){
-                                    choice4 = choice7;
-                                    choice7 = null;
-                                } else {
-                                    if(!choice5){
-                                        choice5 = choice7;
-                                        choice7 = null;
-                                    } else {
-                                        choice6 = choice7;
-                                        choice7 = null;
-                                    }
-                                }
-                            }
-                        }
-                    } else {
-                        if(!choice3){
-                            choice3 = choice6;
-                            choice6 = null;
-                        } else {
-                            if(!choice4){
-                                choice4 = choice6;
-                                choice6 = null;
-                            } else {
-                                choice5 = choice6;
-                                choice6 = null;
-                            }
-                        }
-                    }
-                } else {
-                    if(!choice3){
-                        choice3 = choice5;
-                        choice5 = null;
-                    } else {
-                        choice4 = choice5;
-                        choice5 = null;
-                    }
-                }
-            } else {
-                choice3 = choice4;
-                choice4 = null;
+        //checking
+        let choiceArray = [choice3, choice4, choice5, choice6, choice7, choice8, choice9];
+        choiceArray.forEach(element => {
+            if(!element) {
+                choiceArray.filter(item => !element.includes(item))
+                console.log(choiceArray);
             }
-        }
+        });
+
+        //doing the illegal for checking purposes
+        // if(!choice3){
+        //     if(!choice4){
+        //         if(!choice5){
+        //             if(!choice6){
+        //                 if(!choice7){
+        //                     if(!choice8){
+        //                         if(!choice9){
+        //                             console.log("Poll with no additional choiced created");
+        //                         } else {
+        //                             if(!choice3){
+        //                                 choice3 = choice9;
+        //                                 choice9 = null;
+        //                             } else {
+        //                                 if(!choice4){
+        //                                     choice4 = choice9;
+        //                                     choice9 = null;
+        //                                 } else {
+        //                                     if(!choice5){
+        //                                         choice5 = choice9;
+        //                                         choice9 = null;
+        //                                     } else {
+        //                                         if(choice6){
+        //                                             choice6 = choice9;
+        //                                             choice9 = null;
+        //                                         } else {
+        //                                             if(!choice7){
+        //                                                 choice7 = choice9;
+        //                                                 choice9 = null;
+        //                                             } else {
+        //                                                 choice8 = choice9;
+        //                                                 choice9 = null;
+        //                                             }
+        //                                         }
+        //                                     }
+        //                                 }
+        //                             }
+        //                         }
+        //                     } else {
+        //                         if(!choice3){
+        //                             choice3 = choice8;
+        //                             choice8 = null;
+        //                         } else {
+        //                             if(!choice4){
+        //                                 choice4 = choice8;
+        //                                 choice8 = null;
+        //                             } else {
+        //                                 if(!choice5){
+        //                                     choice5 = choice8;
+        //                                     choice8 = null;
+        //                                 } else {
+        //                                     if(!choice6){
+        //                                         choice6 = choice8;
+        //                                         choice8 = null;
+        //                                     } else {
+        //                                         choice7 = choice8;
+        //                                         choice8 = null;
+        //                                     }
+        //                                 }
+        //                             }
+        //                         }
+        //                     }
+        //                 } else {
+        //                     if(!choice3){
+        //                         choice3 = choice7;
+        //                         choice7 = null;
+        //                     } else {
+        //                         if(!choice4){
+        //                             choice4 = choice7;
+        //                             choice7 = null;
+        //                         } else {
+        //                             if(!choice5){
+        //                                 choice5 = choice7;
+        //                                 choice7 = null;
+        //                             } else {
+        //                                 choice6 = choice7;
+        //                                 choice7 = null;
+        //                             }
+        //                         }
+        //                     }
+        //                 }
+        //             } else {
+        //                 if(!choice3){
+        //                     choice3 = choice6;
+        //                     choice6 = null;
+        //                 } else {
+        //                     if(!choice4){
+        //                         choice4 = choice6;
+        //                         choice6 = null;
+        //                     } else {
+        //                         choice5 = choice6;
+        //                         choice6 = null;
+        //                     }
+        //                 }
+        //             }
+        //         } else {
+        //             if(!choice3){
+        //                 choice3 = choice5;
+        //                 choice5 = null;
+        //             } else {
+        //                 choice4 = choice5;
+        //                 choice5 = null;
+        //             }
+        //         }
+        //     } else {
+        //         choice3 = choice4;
+        //         choice4 = null;
+        //     }
+        // }
 
         //create embed
         let pollembed = new MessageEmbed()
