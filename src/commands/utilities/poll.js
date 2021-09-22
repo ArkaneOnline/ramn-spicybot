@@ -37,6 +37,16 @@ module.exports = {
         let choiceArray = [choice3, choice4, choice5, choice6, choice7, choice8, choice9];
         var filteredChoiceArray = choiceArray.filter(element => element !== null);
 
+        //clear old variables
+        choice3 = null;
+        choice4 = null;
+        choice5 = null;
+        choice6 = null;
+        choice7 = null;
+        choice8 = null;
+        choice9 = null;
+
+        //set new variables
         if(filteredChoiceArray[0]) choice3 = filteredChoiceArray[0];
         if(filteredChoiceArray[1]) choice4 = filteredChoiceArray[1];
         if(filteredChoiceArray[2]) choice5 = filteredChoiceArray[2];
