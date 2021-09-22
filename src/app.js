@@ -30,7 +30,7 @@ const twitterConf = {
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 }
 const twitterClient = new Twitter(twitterConf);
-const destinationChannelID = "774146090731307018"
+const destinationChannelID = "511922224727457804"
 //end twitter configuration
 
 const stream = twitterClient.stream("statuses/filter", {
