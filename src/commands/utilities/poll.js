@@ -35,12 +35,9 @@ module.exports = {
 
         //checking
         let choiceArray = [choice3, choice4, choice5, choice6, choice7, choice8, choice9];
-        choiceArray.forEach(element => {
-            if(element === null) var filteredChoiceArray = choiceArray.filter(function(element){
-                console.log(filteredChoiceArray);
-            })
+        var filteredChoiceArray = choiceArray.filter(element => element !== null);
 
-        });
+        console.log(filteredChoiceArray);
 
         //doing the illegal for checking purposes
         // if(!choice3){
