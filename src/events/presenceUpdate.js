@@ -1,6 +1,7 @@
 module.exports = {
     name: "presenceUpdate",
     async execute(newPresence, client) {
+        console.log("User Presence Cahnged!");
         let serverID = "511289361178820618";
         let channelID = "774146090731307018";
 
