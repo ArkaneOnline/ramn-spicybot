@@ -14,5 +14,15 @@ module.exports = {
 
             channel.send(`${streamer} has gone live at: ${link}`);
         }
+
+        if(newPresence.activities.type === "PLAYING") {
+            let userPlaying = newPresence.member;
+            let content = newPresence.activities.name;
+
+            let guild = client.guilds.cache.get(serverID);
+            let channel = guild.channels.cache.get(channelID);
+
+            channel.send(`Testing: ${userPlaying.tag} is now playing ${content}`);
+        }
     }
 }
