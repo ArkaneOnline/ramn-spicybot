@@ -9,7 +9,7 @@ module.exports = {
         if (!newPresence.activities) return false;
         newPresence.activities.forEach(activity => {
             if (activity.type == "PLAYING") {
-                console.log(`Testing: ${newPresence.user.tag} is now playing ${newPresence.activities.details}`)
+                console.log(`Testing: ${newPresence.user.tag} is now playing ${newPresence.activities.name()}`)
                 //channel.send(`Testing: ${newPresence.user.tag} is now playing ${newPresence.activities.name}`);
             };
         });
