@@ -1,16 +1,13 @@
 module.exports = {
     name: "presenceUpdate",
     async execute(oldPresence, newPresence, client) {
-
-        let server = client.guilds.cache.get("511289361178820618");
-        let channel = client.channels.cache.get("774146090731307018");
+        let channel = client.channels.cache.get("891238696223899668");
 
         console.log("User Presence Cahnged!");
         if (!newPresence.activities) return false;
         newPresence.activities.forEach(activity => {
-            if (activity.type == "PLAYING") {
-                console.log(`Testing: ${newPresence.user.tag} is now playing ${newPresence.activities}`)
-                channel.send(`Testing: ${newPresence.user.tag} is now playing ${newPresence.activities}`);
+            if (activity.type == "STREAMING") {
+                channel.send(`${newPresence.user.tag} is now live at: **${activity.url}**`);
             };
         });
     }
