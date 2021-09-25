@@ -5,7 +5,7 @@ module.exports = {
         let serverID = "511289361178820618";
         let channelID = "774146090731307018";
 
-        if(newPresence.activities.type === "STREAMING") {
+        if(newPresence.activities.type == "STREAMING") {
             let streamer = newPresence.member;
             let link = newPresence.activities.url;
 
@@ -15,7 +15,7 @@ module.exports = {
             channel.send(`${streamer} has gone live at: ${link}`);
         }
 
-        if(newPresence.activities.type === "PLAYING") {
+        if(newPresence.activities.type == "PLAYING") {
             let userPlaying = newPresence.member;
             let content = newPresence.activities.name;
 
