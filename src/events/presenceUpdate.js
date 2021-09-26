@@ -5,6 +5,7 @@ module.exports = {
 
         if (!newPresence.activities) return false;
         newPresence.activities.forEach(activity => {
+            if (oldPresence.activities.type == "STREAMING") return;
             if (activity.type == "STREAMING") {
                 channel.send(`${newPresence.user.tag} is now live at: **${activity.url}**`);
             };
