@@ -5,7 +5,7 @@ module.exports = {
         let clanrole = newPresence.guild.roles.cache.get("892213185749319760");
 
         if (!newPresence.activities) return false;
-        if (newPresence.member.roles.cache.has(clanrole)) {
+        if (newPresence.member.roles.cache.has(clanrole.id)) {
             newPresence.activities.forEach(activity => {
                 if (oldPresence.activities.type == "STREAMING") return false;
                 if (activity.type == "STREAMING") {
