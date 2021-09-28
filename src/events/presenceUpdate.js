@@ -5,7 +5,7 @@ module.exports = {
         let clanrole = newPresence.guild.roles.cache.get("892213185749319760");
 
         if (!newPresence.activities) return false;
-        if (!newPresence.member.roles.cache.has(clanrole)) return console.log("User does not have RAMN role.");
+        if (newPresence.member.roles.cache.has(clanrole)) return console.log("User does not have RAMN role.");
         newPresence.activities.forEach(activity => {
             if (oldPresence.activities.type == "STREAMING") return false;
             if (activity.type == "STREAMING") {
