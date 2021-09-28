@@ -6,13 +6,11 @@ module.exports = {
 
         if (!newPresence.activities) return false;
         // if (!newPresence.member.roles.cache.has(clanrole)) return false;
-        // newPresence.activities.forEach(activity => {
-        //     if (oldPresence.activities.type == "STREAMING") return false;
-        //     if (activity.type == "STREAMING") {
-        //         channel.send(`${newPresence.user.tag} is now live! \nChack them out at: **<${activity.url}>**`);
-        //     };
-        // });
-
-        if (newPresence.activities.type == "STREAMING") channel.send(`${newPresence.user.tag} is now live! \nChack them out at: **<${activity.url}>**`);
+        newPresence.activities.forEach(activity => {
+            // if (oldPresence.activities.type == "STREAMING") return false;
+            if (activity.type == "STREAMING") {
+                channel.send(`${newPresence.user.tag} is now live! \nChack them out at: **<${activity.url}>**`);
+            };
+        });
     }
 }
