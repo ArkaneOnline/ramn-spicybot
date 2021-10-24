@@ -7,7 +7,6 @@
     "node": "16.7.0",
     "npm": "*"
   },
-  "type": "module",
   "scripts": {
     "app": "node ."
   },
