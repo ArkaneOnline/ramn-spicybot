@@ -1,7 +1,7 @@
 const { Client, Intents, Collection} = require("discord.js");
 const fs = require("fs");
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_PRESENCES]});
-const fetch = require("node-fetch");
+const fetch = require('node-fetch');
 
 client.commands = new Collection();
 
