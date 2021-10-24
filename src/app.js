@@ -50,7 +50,7 @@ stream.on("tweet", tweet => {
 })
 //end twitter integration
 
-var timer = 10, interval = timer * 60 * 1000; //This checks every 10 minutes, change 10 to whatever minute you'd like
+var timer = 5, interval = timer * 60 * 1000; //This checks every 10 minutes, change 10 to whatever minute you'd like
 setInterval(function() {
 	fetch("https://betteruptime.com/api/v1/heartbeat/VvUhsKD7Z72vkpAaHbpaegNc")
     console.log("Spicybot: GET request made to heartbeat.");
