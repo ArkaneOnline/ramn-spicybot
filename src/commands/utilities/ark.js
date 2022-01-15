@@ -5,7 +5,7 @@ module.exports = {
         .setName("ark")
         .setDescription("Allows you to assign the ARK Updates role to yourself")
         .addStringOption(option => 
-            option.setName("Add/Remove")
+            option.setName("add/remove")
                 .setDescription("Choose whether to add or remove the role")
                 .setRequired(true)
                 .addChoice("Add", "add")
