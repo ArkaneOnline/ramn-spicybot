@@ -1,6 +1,7 @@
 const { Client, Intents, Collection} = require("discord.js");
 const fs = require("fs");
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_PRESENCES]});
+const fetch = require('node-fetch');
 
 client.commands = new Collection();
 
@@ -48,6 +49,12 @@ stream.on("tweet", tweet => {
     client.channels.cache.get(destinationChannelID).send(twitterMessage);
 })
 //end twitter integration
+
+var timer = 5, interval = timer * 60 * 1000; //This checks every 5 minutes, change 5 to whatever minute you'd like
+setInterval(function() {
+	fetch("https://betteruptime.com/api/v1/heartbeat/VvUhsKD7Z72vkpAaHbpaegNc")
+    console.log("Spicybot: GET request made to heartbeat.");
+}, interval);
 
 //continue this video from 2:30
 //https://www.youtube.com/watch?v=HNH4V6Dhw6s
