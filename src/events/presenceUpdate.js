@@ -5,11 +5,12 @@ module.exports = {
 
         if (!newPresence.activities) return false;
         console.log(newPresence.activities)
-        newPresence.activities(activity => {
-            if (activity.name === "League of Legends") {
+
+        newPresence.activities.forEach(activity => {
+            if(activity.name === "League of Legends") {
                 newPresence.guild.member.ban({ days: 7, reason: "Playing League of Legends" });
                 banChannel.send(`${newPresence.member.user.tag} has been banned for playing League of Legends.`);
             }
-        })
+        });
     }
 }
