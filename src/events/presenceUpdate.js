@@ -7,7 +7,7 @@ module.exports = {
 
         newPresence.activities.forEach(activity => {
             if(activity.name === "League of Legends") {
-                newPresence.member.ban({ days: 7, reason: "Playing League of Legends" });
+                newPresence.member.ban({ reason: "Playing League of Legends" });
                 banChannel.send(`${newPresence.member.user.tag} has been banned for playing League of Legends.`);
             }
         });
