@@ -3,7 +3,7 @@ module.exports = {
     async execute(oldPresence, newPresence, client) {
         let banChannel = client.channels.cache.get("560340160819232788");
 
-        if (!newPresence.activities) return;
+        if (!newPresence.activities) return false;
         console.log(newPresence.activities)
         newPresence.activities(activity => {
             if (activity.name === "League of Legends") {
